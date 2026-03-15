@@ -74,7 +74,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    struct sockaddr_in server_address;
+    sockaddr_in server_address;
     server_address.sin_family = AF_INET;
     server_address.sin_port = htons(PORT);
 
@@ -93,7 +93,7 @@ int main(int argc, char* argv[]) {
 
     while (true) {
         std::getline(std::cin, input);
-        send(sockfd, input.c_str(), input.length(), 0);
+        sendto(sockfd, input.c_str(), input.length(), 0, (sockaddr*) &server_address, sizeof(server_address));
     }
 
     close(sockfd);

@@ -7,14 +7,10 @@
 
 static std::string IP;
 static int PORT;
-static int TIMEOUT;
-static int MAX_RETRIES;
 
 enum class Flag {
-    TargetIP,
-    TargetPort,
-    Timeout,
-    MaxRetries,
+    ListenIP,
+    ListenPort,
     Unknown
 };
 
@@ -25,10 +21,8 @@ struct Argument {
 };
 
 static const std::unordered_map<std::string, Argument> LEGAL_FLAGS = {
-    {"--target-ip",   {Flag::TargetIP, &IP}},
-    {"--target-port", {Flag::TargetPort, &PORT}},
-    {"--timeout",     {Flag::Timeout, &TIMEOUT}},
-    {"--max-retries", {Flag::MaxRetries, &MAX_RETRIES}}
+    {"--listen-ip",   {Flag::ListenIP, &IP}},
+    {"--listen-port", {Flag::ListenPort, &PORT}},
 };
 
 void parse_args(int argc, char* argv[]) {
@@ -39,7 +33,7 @@ void parse_args(int argc, char* argv[]) {
         // Check if argv[i + 1] is within bounds
         if (i + 1 < argc) {
             switch (LEGAL_FLAGS.count(arg) ? LEGAL_FLAGS.at(arg).flag : Flag::Unknown) {
-                case Flag::TargetIP:
+                case Flag::ListenIP:
                     *(static_cast<std::string*>(LEGAL_FLAGS.at(arg).value)) = argv[++i];
                     break;
                 case Flag::Unknown:
@@ -58,8 +52,6 @@ void parse_args(int argc, char* argv[]) {
 void print_args() {
     std::cout << IP << std::endl;
     std::cout << PORT << std::endl;
-    std::cout << TIMEOUT << std::endl;
-    std::cout << MAX_RETRIES << std::endl;
 }
 
 int main(int argc, char* argv[]) {
@@ -73,26 +65,31 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    struct sockaddr_in server_address;
+    sockaddr_in server_address;
+    sockaddr_in client_address;
+
     server_address.sin_family = AF_INET;
     server_address.sin_port = htons(PORT);
 
     if (inet_pton(AF_INET, IP.c_str(), &server_address.sin_addr) <= 0) {
         std::cerr << "INVALID ADDRESS..." << std::endl;
-        return 1;
+        return -1;
     }
 
-    if (connect(sockfd, (struct sockaddr*) &server_address, sizeof(server_address)) < 0) {
-        std::cerr << "CONNECTION FAILED..." << std::endl;
-        return 1;
+    if (bind(sockfd, (const struct sockaddr *) &server_address, sizeof(server_address)) < 0) {
+        perror("bind failed");
+        return -1;
     }
 
-    std::cout << "Connected to server!" << std::endl;
-    std::string input;
+    std::cout << "LISTENING ON PORT: " << PORT << std::endl;
+
+    char buffer[1024];
+    socklen_t len = sizeof(client_address);
 
     while (true) {
-        std::getline(std::cin, input);
-        send(sockfd, input.c_str(), input.length(), 0);
+        int n = recvfrom(sockfd, (char*) buffer, 1024, MSG_WAITALL, (sockaddr*) &client_address, &len);
+        buffer[n] = '\0';
+        std::cout << buffer << std::endl;
     }
 
     close(sockfd);
