@@ -1,4 +1,4 @@
-g++ -std=c++17 server.cpp -o server
+g++ -std=c++17 server.cpp ../packet.cpp -o server
 
 ./server --listen-ip 127.0.0.1 --listen-port 8888
 

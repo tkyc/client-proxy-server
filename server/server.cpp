@@ -1,8 +1,7 @@
+#include "../packet.h"
 #include <iostream>
-#include <string>
 #include <unordered_map>
 #include <sys/socket.h>
-#include <arpa/inet.h>
 #include <unistd.h>
 
 static std::string IP;
@@ -83,13 +82,15 @@ int main(int argc, char* argv[]) {
 
     std::cout << "LISTENING ON PORT: " << PORT << std::endl;
 
-    char buffer[1024];
-    socklen_t len = sizeof(client_address);
+    uint8_t buf[1024];
+    socklen_t client_len = sizeof(client_address);
 
     while (true) {
-        int n = recvfrom(sockfd, (char*) buffer, 1024, MSG_WAITALL, (sockaddr*) &client_address, &len);
-        buffer[n] = '\0';
-        std::cout << buffer << std::endl;
+        int n = recvfrom(sockfd, buf, sizeof(buf), MSG_WAITALL, (sockaddr*) &client_address, &client_len);
+        Packet packet = Packet::deserialize(buf);
+        std::cout << packet << std::endl;
+        // buffer[n] = '\0';
+        // std::cout << buffer << std::endl;
     }
 
     close(sockfd);

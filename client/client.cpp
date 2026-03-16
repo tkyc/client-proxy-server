@@ -1,15 +1,14 @@
-#include "message.h"
+#include "../packet.h"
 #include <iostream>
-#include <string>
 #include <unordered_map>
 #include <sys/socket.h>
-#include <arpa/inet.h>
 #include <unistd.h>
 
 static std::string IP;
 static int PORT;
 static int TIMEOUT;
 static int MAX_RETRIES;
+static uint32_t seq = 0;
 
 enum class Flag {
     TargetIP,
@@ -93,7 +92,14 @@ int main(int argc, char* argv[]) {
 
     while (true) {
         std::getline(std::cin, input);
-        sendto(sockfd, input.c_str(), input.length(), 0, (sockaddr*) &server_address, sizeof(server_address));
+        int offset = 0;
+
+        while (offset < input.length()) {
+            Packet packet(seq++);
+            offset = packet.setPayload(input, offset);
+            std::vector<uint8_t> buf = packet.serialize();
+            sendto(sockfd, buf.data(), buf.size(), 0, (sockaddr*) &server_address, sizeof(server_address));
+        }
     }
 
     close(sockfd);

@@ -1,3 +1,3 @@
-g++ -std=c++17 main.cpp message.cpp -o client
+g++ -std=c++17 client.cpp ../packet.cpp -o client
 
-./main --target-ip 127.0.0.1 --target-port 8888 --timeout 10 --max-retries 3
+./client --target-ip 127.0.0.1 --target-port 8888 --timeout 10 --max-retries 3
