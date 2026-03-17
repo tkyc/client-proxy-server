@@ -1,6 +1,6 @@
 #include "packet.h"
 
-Packet::Packet(int seq) : seq(seq) {}
+Packet::Packet(int seq, int len) : seq(seq), len(len) {}
 
 void Packet::setSeq(int seq) {
     this->seq = seq;
@@ -8,6 +8,14 @@ void Packet::setSeq(int seq) {
 
 const int& Packet::getSeq() const {
     return this->seq;
+}
+
+void Packet::setLen(int len) {
+    this->len = len;
+}
+
+const int& Packet::getLen() const {
+    return this->len;
 }
 
 const std::vector<uint8_t>& Packet::getPayload() const {
@@ -44,7 +52,7 @@ int Packet::setPayload(std::string& input, int offset) {
 }
 
 void Packet::setPayload(uint8_t* buf) {
-    this->payload.assign(buf + 4, buf + 4 + Packet::MAX_SIZE);
+    this->payload.assign(buf + 8, buf + 8 + Packet::MAX_SIZE);
 }
 
 const std::vector<uint8_t> Packet::serialize() const {
@@ -53,9 +61,11 @@ const std::vector<uint8_t> Packet::serialize() const {
     std::vector<uint8_t> buf(Packet::PACKET_SIZE);
 
     uint32_t seq = htonl(this->seq);
+    uint32_t len = htonl(this->len);
 
     std::memcpy(buf.data() + 0, &seq, 4);
-    std::memcpy(buf.data() + 4, this->payload.data(), Packet::MAX_SIZE);
+    std::memcpy(buf.data() + 4, &len, 4);
+    std::memcpy(buf.data() + 8, this->payload.data(), Packet::MAX_SIZE);
 
     std::cout << "Packet::serialize() - seq: " << seq << " - " << "payload: [";
     for (uint8_t byte : this->payload) {
@@ -76,17 +86,23 @@ const std::vector<uint8_t> Packet::serialize() const {
 
 Packet Packet::deserialize(uint8_t* buf) {
     int netSeq;
+    int netLen;
+
     std::memcpy(&netSeq, buf + 0, 4);
+    std::memcpy(&netLen, buf + 4, 4);
 
     Packet packet;
     packet.setSeq(ntohl(netSeq));
+    packet.setLen(ntohl(netLen));
     packet.setPayload(buf);
 
     return packet;
 }
 
 std::ostream& operator<<(std::ostream& os, const Packet& packet) {
-    os << "SEQUENCE: " << packet.getSeq() << " - PAYLOAD SIZE: " << packet.getPayload().size() << " - PAYLOAD: [";
+    os << "SEQUENCE: " << packet.getSeq() 
+        << " - MESSAGE LEN: " << packet.getLen() 
+        << " - PAYLOAD SIZE: " << packet.getPayload().size() << " - PAYLOAD MSG CHARS: [";
     
     for (uint8_t byte : packet.getPayload()) {
         os << static_cast<char>(byte);

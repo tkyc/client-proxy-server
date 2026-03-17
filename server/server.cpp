@@ -1,4 +1,5 @@
 #include "../packet.h"
+#include "../logger.h"
 #include <iostream>
 #include <unordered_map>
 #include <sys/socket.h>
@@ -54,6 +55,10 @@ void print_args() {
 }
 
 int main(int argc, char* argv[]) {
+
+    Logger logger;
+    logger.init("SERVER", "server.log");
+
     parse_args(argc, argv);
 
     int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
@@ -80,7 +85,7 @@ int main(int argc, char* argv[]) {
         return -1;
     }
 
-    std::cout << "LISTENING ON PORT: " << PORT << std::endl;
+    logger.log("STARTED", "Listening on " + IP + ":" + std::to_string(PORT));
 
     uint8_t buf[1024];
     socklen_t client_len = sizeof(client_address);
