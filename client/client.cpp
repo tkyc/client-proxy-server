@@ -65,8 +65,9 @@ void print_args() {
 
 int main(int argc, char* argv[]) {
 
-    Logger logger;
-    logger.init("CLIENT", "client.log");
+    std::shared_ptr<Logger> logger = std::make_shared<Logger>();
+    logger->init("CLIENT", "client.log");
+    Packet::setLogger(logger);
 
     parse_args(argc, argv);
 
@@ -74,7 +75,7 @@ int main(int argc, char* argv[]) {
 
     if (sockfd < 0) {
         std::cerr << "[ERROR] Failed to create socket"<< std::endl;
-        logger.log("ERROR", "Failed to create socket");
+        logger->log("ERROR", "Failed to create socket");
         return EXIT_FAILURE;
     }
 
@@ -84,17 +85,17 @@ int main(int argc, char* argv[]) {
 
     if (inet_pton(AF_INET, IP.c_str(), &server_address.sin_addr) <= 0) {
         std::cerr << "[ERROR] Invalid target IP" << std::endl;
-        logger.log("ERROR", "Invalid target IP");
+        logger->log("ERROR", "Invalid target IP");
         return EXIT_FAILURE;
     }
 
     if (connect(sockfd, (struct sockaddr*) &server_address, sizeof(server_address)) < 0) {
         std::cerr << "[Error] Connecting to server failed" << std::endl;
-        logger.log("ERROR", "Connecting to server failed");
+        logger->log("ERROR", "Connecting to server failed");
         return EXIT_FAILURE;
     }
 
-    logger.log("CONNECTED", "target=" + IP + ":" + std::to_string(PORT)
+    logger->log("CONNECTED", "target=" + IP + ":" + std::to_string(PORT)
              + " - timeout=" + std::to_string(TIMEOUT)
              + " - max_retries=" + std::to_string(MAX_RETRIES));
 

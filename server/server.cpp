@@ -49,11 +49,6 @@ void parse_args(int argc, char* argv[]) {
     }
 }
 
-void print_args() {
-    std::cout << IP << std::endl;
-    std::cout << PORT << std::endl;
-}
-
 int main(int argc, char* argv[]) {
 
     Logger logger;
@@ -64,9 +59,9 @@ int main(int argc, char* argv[]) {
     int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
 
     if (sockfd < 0) {
-        std::cout << "ERROR CREATING SOCKET..." << std::endl;
-        // throw exception here
-        return 1;
+        std::cerr << "[ERROR] Failed to create socket"<< std::endl;
+        logger.log("ERROR", "Failed to create socket");
+        return EXIT_FAILURE;
     }
 
     sockaddr_in server_address;
@@ -76,23 +71,25 @@ int main(int argc, char* argv[]) {
     server_address.sin_port = htons(PORT);
 
     if (inet_pton(AF_INET, IP.c_str(), &server_address.sin_addr) <= 0) {
-        std::cerr << "INVALID ADDRESS..." << std::endl;
-        return -1;
+        std::cerr << "[ERROR] Invalid IP" << std::endl;
+        logger.log("ERROR", "Invalid IP");
+        return EXIT_FAILURE;
     }
 
     if (bind(sockfd, (const struct sockaddr *) &server_address, sizeof(server_address)) < 0) {
-        perror("bind failed");
-        return -1;
+        std::cerr << "[ERROR] Bind failed" << std::endl;
+        logger.log("ERROR", "Bind failed");
+        return EXIT_FAILURE;
     }
 
     logger.log("STARTED", "Listening on " + IP + ":" + std::to_string(PORT));
 
     uint8_t buf[1024];
-    socklen_t client_len = sizeof(client_address);
+    socklen_t client_len = sizeof(client_address)
 
     while (true) {
         int n = recvfrom(sockfd, buf, sizeof(buf), MSG_WAITALL, (sockaddr*) &client_address, &client_len);
-        Packet packet = Packet::deserialize(buf);
+        Packet packet = Packet::deserialize(buf).setLogger(logger);
         std::cout << packet << std::endl;
         // buffer[n] = '\0';
         // std::cout << buffer << std::endl;
@@ -100,6 +97,6 @@ int main(int argc, char* argv[]) {
 
     close(sockfd);
 
-    return 0;
+    return EXIT_SUCCESS;
 }
 

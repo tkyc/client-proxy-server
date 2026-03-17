@@ -2,6 +2,20 @@
 
 Packet::Packet(int seq, int len) : seq(seq), len(len) {}
 
+const std::string Packet::printPayload() const {
+    std::ostringstream oss;
+    oss << "[ ";
+    for (auto byte : this->payload) {
+        oss << "0x" << std::hex << std::setfill('0') << std::setw(2) << (int)byte << " ";
+    }
+    oss << "]";
+    return oss.str();
+}
+
+void Packet::setLogger(std::shared_ptr<Logger> logger) {
+    Packet::logger = logger;
+}
+
 void Packet::setSeq(int seq) {
     this->seq = seq;
 }
@@ -26,27 +40,14 @@ int Packet::setPayload(std::string& input, int offset) {
     int count = 0;
     int i = offset;
 
-    std::cout<< "Packet::setPayload() - starting payload size: " << this->payload.size() << std::endl;
-    std::cout<< "Packet::setPayload() - offset: " << offset << std::endl;
-
     for (; i < input.length(); i++) {
         if (count < MAX_SIZE) {
-            std::cout<< "Packet::setPayload() - i: " << i << " - input[i]: " << input[i] << std::endl;
-            std::cout<< "Packet::setPayload() - sizeof(input[i]): " << sizeof(input[i]) << std::endl;
             this->payload.push_back(input[i]);
-            std::cout<< "Packet::setPayload() - working payload size: " << this->payload.size() << std::endl;
             count++;
         } else {
             break;
         }
     }
-
-    std::cout<< "Packet::setPayload() - final payload size: " << this->payload.size() << std::endl;
-
-    for (uint8_t byte : this->payload) {
-        std::cout << static_cast<char>(byte) << " ";
-    }
-    std::cout << std::endl;
 
     return i;
 }
@@ -56,8 +57,8 @@ void Packet::setPayload(uint8_t* buf) {
 }
 
 const std::vector<uint8_t> Packet::serialize() const {
-    std::cout << "Packet::serialize() - START" << std::endl;
-    // Wire format: [ seqNum (4 bytes) | payload (MAX_SIZE bytes) ]
+    Packet::logger->log("START", "Packet::serialize()");
+
     std::vector<uint8_t> buf(Packet::PACKET_SIZE);
 
     uint32_t seq = htonl(this->seq);
@@ -67,7 +68,8 @@ const std::vector<uint8_t> Packet::serialize() const {
     std::memcpy(buf.data() + 4, &len, 4);
     std::memcpy(buf.data() + 8, this->payload.data(), Packet::MAX_SIZE);
 
-    std::cout << "Packet::serialize() - seq: " << seq << " - " << "payload: [";
+    Packet::logger->log("INFO", "Packet::serialize() - seq: " + std::to_string(seq) + " - payload: " + this->printPayload());
+
     for (uint8_t byte : this->payload) {
         std::cout << static_cast<char>(byte) << " ";
     }
@@ -80,6 +82,8 @@ const std::vector<uint8_t> Packet::serialize() const {
     }
     std::cout << "]" << std::endl;
     std::cout << "Packet::serialize() - END" << std::endl;
+
+    Packet::logger->log("END", "Packet::serialize()");
 
     return buf;
 }
@@ -101,8 +105,8 @@ Packet Packet::deserialize(uint8_t* buf) {
 
 std::ostream& operator<<(std::ostream& os, const Packet& packet) {
     os << "SEQUENCE: " << packet.getSeq() 
-        << " - MESSAGE LEN: " << packet.getLen() 
-        << " - PAYLOAD SIZE: " << packet.getPayload().size() << " - PAYLOAD MSG CHARS: [";
+       << " - MESSAGE LEN: " << packet.getLen() 
+       << " - PAYLOAD SIZE: " << packet.getPayload().size() << " - PAYLOAD MSG CHARS: [";
     
     for (uint8_t byte : packet.getPayload()) {
         os << static_cast<char>(byte);
