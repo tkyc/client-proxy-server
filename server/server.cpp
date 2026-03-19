@@ -2,11 +2,15 @@
 #include "../logger.h"
 #include <iostream>
 #include <unordered_map>
+#include <queue>
+#include <thread>
 #include <sys/socket.h>
 #include <unistd.h>
 
 static std::string IP;
 static int PORT;
+
+static std::queue<Packet> receive_queue;
 
 enum class Flag {
     ListenIP,
@@ -49,10 +53,20 @@ void parse_args(int argc, char* argv[]) {
     }
 }
 
+void send_ack(int& sockfd, sockaddr_in& client_address, int seq) {
+    int netSeq = htonl(seq);
+    uint8_t buf[4];
+
+    std::memcpy(buf, &netSeq, 4);
+
+    sendto(sockfd, buf, 4, 0, (sockaddr*) &client_address, sizeof(client_address));
+}
+
 int main(int argc, char* argv[]) {
 
-    Logger logger;
-    logger.init("SERVER", "server.log");
+    std::shared_ptr<Logger> logger = std::make_shared<Logger>();
+    logger->init("SERVER", "server.log");
+    Packet::setLogger(logger);
 
     parse_args(argc, argv);
 
@@ -60,7 +74,7 @@ int main(int argc, char* argv[]) {
 
     if (sockfd < 0) {
         std::cerr << "[ERROR] Failed to create socket"<< std::endl;
-        logger.log("ERROR", "Failed to create socket");
+        logger->log("ERROR", "Failed to create socket");
         return EXIT_FAILURE;
     }
 
@@ -72,25 +86,28 @@ int main(int argc, char* argv[]) {
 
     if (inet_pton(AF_INET, IP.c_str(), &server_address.sin_addr) <= 0) {
         std::cerr << "[ERROR] Invalid IP" << std::endl;
-        logger.log("ERROR", "Invalid IP");
+        logger->log("ERROR", "Invalid IP");
         return EXIT_FAILURE;
     }
 
     if (bind(sockfd, (const struct sockaddr *) &server_address, sizeof(server_address)) < 0) {
         std::cerr << "[ERROR] Bind failed" << std::endl;
-        logger.log("ERROR", "Bind failed");
+        logger->log("ERROR", "Bind failed");
         return EXIT_FAILURE;
     }
 
-    logger.log("STARTED", "Listening on " + IP + ":" + std::to_string(PORT));
+    logger->log("STARTED", "Listening on " + IP + ":" + std::to_string(PORT));
 
     uint8_t buf[1024];
-    socklen_t client_len = sizeof(client_address)
+    socklen_t client_len = sizeof(client_address);
 
     while (true) {
         int n = recvfrom(sockfd, buf, sizeof(buf), MSG_WAITALL, (sockaddr*) &client_address, &client_len);
-        Packet packet = Packet::deserialize(buf).setLogger(logger);
+        Packet packet = Packet::deserialize(buf);
+        receive_queue.push(packet);
         std::cout << packet << std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+        send_ack(sockfd, client_address, packet.getSeq());
         // buffer[n] = '\0';
         // std::cout << buffer << std::endl;
     }

@@ -4,12 +4,16 @@
 #include <unordered_map>
 #include <sys/socket.h>
 #include <unistd.h>
+#include <queue>
 
 static std::string IP;
 static int PORT;
 static int TIMEOUT;
 static int MAX_RETRIES;
+
 static uint32_t seq = 0;
+static std::queue<Packet> sent_queue;
+
 
 enum class Flag {
     TargetIP,
@@ -56,11 +60,13 @@ void parse_args(int argc, char* argv[]) {
     }
 }
 
-void print_args() {
-    std::cout << IP << std::endl;
-    std::cout << PORT << std::endl;
-    std::cout << TIMEOUT << std::endl;
-    std::cout << MAX_RETRIES << std::endl;
+int wait_for_ack(int& sockfd, sockaddr_in& server_address) {
+    uint32_t buf[4];
+    socklen_t len = sizeof(server_address);
+    int netSeq;
+    int n = recvfrom(sockfd, buf, sizeof(buf), MSG_WAITALL, (sockaddr*) &server_address, &len);
+    std::memcpy(&netSeq, buf, 4);
+    return ntohl(netSeq);
 }
 
 int main(int argc, char* argv[]) {
@@ -110,6 +116,11 @@ int main(int argc, char* argv[]) {
             offset = packet.setPayload(input, offset);
             std::vector<uint8_t> buf = packet.serialize();
             sendto(sockfd, buf.data(), buf.size(), 0, (sockaddr*) &server_address, sizeof(server_address));
+            sent_queue.push(packet);
+            int ack = wait_for_ack(sockfd, server_address);
+            std::cout << sent_queue.front() << std::endl;
+            std::cout << "ACK: " << ack << " MATCH: " << (ack == sent_queue.front().getSeq()) << " RECEIVED ACK: " << sent_queue.front().getSeq() << std::endl;
+            sent_queue.pop();
         }
     }
 

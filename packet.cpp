@@ -2,16 +2,6 @@
 
 Packet::Packet(int seq, int len) : seq(seq), len(len) {}
 
-const std::string Packet::printPayload() const {
-    std::ostringstream oss;
-    oss << "[ ";
-    for (auto byte : this->payload) {
-        oss << "0x" << std::hex << std::setfill('0') << std::setw(2) << (int)byte << " ";
-    }
-    oss << "]";
-    return oss.str();
-}
-
 void Packet::setLogger(std::shared_ptr<Logger> logger) {
     Packet::logger = logger;
 }
@@ -57,7 +47,7 @@ void Packet::setPayload(uint8_t* buf) {
 }
 
 const std::vector<uint8_t> Packet::serialize() const {
-    Packet::logger->log("START", "Packet::serialize()");
+    Packet::logger->log("FUNCTION CALL", "Packet::serialize()");
 
     std::vector<uint8_t> buf(Packet::PACKET_SIZE);
 
@@ -70,20 +60,7 @@ const std::vector<uint8_t> Packet::serialize() const {
 
     Packet::logger->log("INFO", "Packet::serialize() - seq: " + std::to_string(seq) + " - payload: " + this->printPayload());
 
-    for (uint8_t byte : this->payload) {
-        std::cout << static_cast<char>(byte) << " ";
-    }
-    std::cout << "]" << std::endl;
-    std::cout << "Packet::serialize() - buf size: " << buf.size() << std::endl;
-    std::cout << "Packet::serialize() - buf: [ ";
-    for (uint8_t byte : buf) {
-        std::cout << "0x" << std::hex << std::setw(2) << std::setfill('0') 
-              << static_cast<int>(byte) << " ";
-    }
-    std::cout << "]" << std::endl;
-    std::cout << "Packet::serialize() - END" << std::endl;
-
-    Packet::logger->log("END", "Packet::serialize()");
+    Packet::logger->log("FUNCTION END", "Packet::serialize()");
 
     return buf;
 }
@@ -101,6 +78,16 @@ Packet Packet::deserialize(uint8_t* buf) {
     packet.setPayload(buf);
 
     return packet;
+}
+
+const std::string Packet::printPayload() const {
+    std::ostringstream oss;
+    oss << "[ ";
+    for (auto byte : this->payload) {
+        oss << "0x" << std::hex << std::setfill('0') << std::setw(2) << (int)byte << " ";
+    }
+    oss << "]";
+    return oss.str();
 }
 
 std::ostream& operator<<(std::ostream& os, const Packet& packet) {

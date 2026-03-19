@@ -44,6 +44,8 @@ class Packet {
         const std::vector<uint8_t> serialize() const;
         static Packet deserialize(uint8_t* buf);
 
+        const std::string parseMessage() const;
+
         const std::string printPayload() const;
 
         friend std::ostream& operator<<(std::ostream& os, const Packet& packet);
