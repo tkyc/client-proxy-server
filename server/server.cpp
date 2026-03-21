@@ -10,6 +10,7 @@
 static std::string IP;
 static int PORT;
 
+static uint32_t expected_seq = 0;
 static std::queue<Packet> receive_queue;
 
 enum class Flag {
@@ -62,6 +63,27 @@ void send_ack(int& sockfd, sockaddr_in& client_address, int seq) {
     sendto(sockfd, buf, 4, 0, (sockaddr*) &client_address, sizeof(client_address));
 }
 
+int getExpectedNumberOfPackets(int msg_len) {
+    return msg_len % Packet::MAX_SIZE == 0 ? msg_len / Packet::MAX_SIZE : msg_len / Packet::MAX_SIZE + 1;
+}
+
+std::string construct_message(int msg_len) {
+    char chars[msg_len];
+    int offset = 0;
+
+    while (!receive_queue.empty()) {
+        Packet& p = receive_queue.front();
+
+        for (int i = 0; i < Packet::MAX_SIZE && offset < msg_len; i++) {
+            chars[offset++] = p.getPayload()[i];
+        }
+
+        receive_queue.pop();
+    }
+
+    return std::string(chars);
+}
+
 int main(int argc, char* argv[]) {
 
     std::shared_ptr<Logger> logger = std::make_shared<Logger>();
@@ -104,12 +126,16 @@ int main(int argc, char* argv[]) {
     while (true) {
         int n = recvfrom(sockfd, buf, sizeof(buf), MSG_WAITALL, (sockaddr*) &client_address, &client_len);
         Packet packet = Packet::deserialize(buf);
-        receive_queue.push(packet);
-        std::cout << packet << std::endl;
-        std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-        send_ack(sockfd, client_address, packet.getSeq());
-        // buffer[n] = '\0';
-        // std::cout << buffer << std::endl;
+        
+        if (expected_seq++ == packet.getSeq()) {
+            receive_queue.push(packet);
+            logger->
+            send_ack(sockfd, client_address, packet.getSeq());
+        }
+
+        if (receive_queue.size() == getExpectedNumberOfPackets(packet.getLen())) {
+            std::cout << construct_message(packet.getLen()) << std::endl;
+        }
     }
 
     close(sockfd);

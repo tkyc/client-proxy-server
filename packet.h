@@ -12,11 +12,8 @@
 
 class Packet {
     private:
-
         // Wire format: [ seqNum (4 bytes) | message len (4 bytes) | payload (MAX_SIZE bytes) ]
         
-        static inline constexpr int MAX_SIZE = 2;
-        static inline constexpr int PACKET_SIZE = 8 + MAX_SIZE;
         static inline std::shared_ptr<Logger> logger = nullptr;
 
         int seq;
@@ -25,6 +22,8 @@ class Packet {
         std::vector<uint8_t> payload;
 
     public:
+        static inline constexpr int MAX_SIZE = 2;
+        static inline constexpr int PACKET_SIZE = 8 + MAX_SIZE;
 
         Packet() {};
         Packet(int seq, int len);
