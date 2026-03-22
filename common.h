@@ -3,23 +3,26 @@
 #include "logger.h"
 #include <sys/socket.h>
 #include <unistd.h>
+#include <cstdint>
+#include <random>
 #include <iostream>
 #include <memory>
+#include <thread>
 #include <csignal>
 #include <atomic>
 #include <unordered_map>
 #include <vector>
+#include <queue>
 
-#include "logger.h"
-#include <memory>
-#include <iostream>
-#include <cstdint>
-#include <exception>
-#include <string>
-#include <cstring>
-#include <vector>
-#include <arpa/inet.h>
-#include <iomanip>
+//#include "../packet.h"
+//#include "../logger.h"
+//#include <iostream>
+//#include <unordered_map>
+//#include <sys/socket.h>
+//#include <unistd.h>
+//#include <queue>
+//#include <random>
+//#include <chrono>
 
 enum class Flag {
     // Common input flags
@@ -97,6 +100,9 @@ class Common {
                 // Check if argv[i + 1] is within bounds
                 if (i + 1 < argc) {
                     switch (Common::LEGAL_FLAGS.count(arg) ? Common::LEGAL_FLAGS.at(arg).flag : Flag::Unknown) {
+                        case Flag::ListenIP:
+                            *(static_cast<std::string*>(LEGAL_FLAGS.at(arg).value)) = argv[++i];
+                            break;
                         case Flag::TargetIP:
                             *(static_cast<std::string*>(Common::LEGAL_FLAGS.at(arg).value)) = argv[++i];
                             break;

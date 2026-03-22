@@ -1,57 +1,6 @@
-#include "../packet.h"
-#include "../logger.h"
-#include <iostream>
-#include <unordered_map>
-#include <queue>
-#include <thread>
-#include <sys/socket.h>
-#include <unistd.h>
-
-static std::string IP;
-static int PORT;
+#include "../common.h"
 
 static std::queue<Packet> receive_queue;
-
-enum class Flag {
-    ListenIP,
-    ListenPort,
-    Unknown
-};
-
-struct Argument {
-    Flag flag;
-    void* value;
-    Argument(Flag flag, void* value) : flag(flag), value(value) {}
-};
-
-static const std::unordered_map<std::string, Argument> LEGAL_FLAGS = {
-    {"--listen-ip",   {Flag::ListenIP, &IP}},
-    {"--listen-port", {Flag::ListenPort, &PORT}},
-};
-
-void parse_args(int argc, char* argv[]) {
-    // Start loop at 1 to skip program name
-    for (int i = 1; i < argc; i++) {
-        std::string arg = argv[i];
-
-        // Check if argv[i + 1] is within bounds
-        if (i + 1 < argc) {
-            switch (LEGAL_FLAGS.count(arg) ? LEGAL_FLAGS.at(arg).flag : Flag::Unknown) {
-                case Flag::ListenIP:
-                    *(static_cast<std::string*>(LEGAL_FLAGS.at(arg).value)) = argv[++i];
-                    break;
-                case Flag::Unknown:
-                    // throw unknown argument error
-                    break;
-                default:
-                    *(static_cast<int*>(LEGAL_FLAGS.at(arg).value)) = std::stoi(argv[++i]);
-                    break;
-            }
-        } else {
-            // throw out of bounds error
-        }
-    }
-}
 
 void send_ack(int& sockfd, sockaddr_in& client_address, int seq) {
     int netSeq = htonl(seq);
@@ -62,7 +11,7 @@ void send_ack(int& sockfd, sockaddr_in& client_address, int seq) {
     sendto(sockfd, buf, 4, 0, (sockaddr*) &client_address, sizeof(client_address));
 }
 
-int getExpectedNumberOfPackets(int msg_len) {
+int get_expected_packet_count(int msg_len) {
     return msg_len % Packet::MAX_SIZE == 0 ? msg_len / Packet::MAX_SIZE : msg_len / Packet::MAX_SIZE + 1;
 }
 
@@ -87,17 +36,15 @@ std::string construct_message(int msg_len) {
 
 int main(int argc, char* argv[]) {
 
-    std::shared_ptr<Logger> logger = std::make_shared<Logger>();
-    logger->init("SERVER", "server.log");
-    Packet::setLogger(logger);
-
-    parse_args(argc, argv);
+    Common::setup_logger("SERVER", "server.log");
+    Common::setup_signal_handler();
+    Common::parse_args(argc, argv);
 
     int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
 
     if (sockfd < 0) {
         std::cerr << "[ERROR] Failed to create socket"<< std::endl;
-        logger->log("ERROR", "Failed to create socket");
+        Common::LOGGER->log("ERROR", "Failed to create socket");
         return EXIT_FAILURE;
     }
 
@@ -105,26 +52,26 @@ int main(int argc, char* argv[]) {
     sockaddr_in client_address;
 
     server_address.sin_family = AF_INET;
-    server_address.sin_port = htons(PORT);
+    server_address.sin_port = htons(Common::LISTEN_PORT);
 
-    if (inet_pton(AF_INET, IP.c_str(), &server_address.sin_addr) <= 0) {
+    if (inet_pton(AF_INET, Common::LISTEN_IP.c_str(), &server_address.sin_addr) <= 0) {
         std::cerr << "[ERROR] Invalid IP" << std::endl;
-        logger->log("ERROR", "Invalid IP");
+        Common::LOGGER->log("ERROR", "Invalid IP");
         return EXIT_FAILURE;
     }
 
     if (bind(sockfd, (const struct sockaddr *) &server_address, sizeof(server_address)) < 0) {
         std::cerr << "[ERROR] Bind failed" << std::endl;
-        logger->log("ERROR", "Bind failed");
+        Common::LOGGER->log("ERROR", "Bind failed");
         return EXIT_FAILURE;
     }
 
-    logger->log("STARTED", "Listening on " + IP + ":" + std::to_string(PORT));
+    Common::LOGGER->log("STARTED", "Listening on " + Common::LISTEN_IP + ":" + std::to_string(Common::LISTEN_PORT));
 
     uint8_t buf[1024];
     socklen_t client_len = sizeof(client_address);
 
-    while (true) {
+    while (Common::RUNNING) {
         int n = recvfrom(sockfd, buf, sizeof(buf), MSG_WAITALL, (sockaddr*) &client_address, &client_len);
         Packet packet = Packet::deserialize(buf);
 
@@ -134,18 +81,25 @@ int main(int argc, char* argv[]) {
                 receive_queue.push(packet);
             }
 
-            logger->log("PACKET RECEIVED", packet.to_string());
+            Common::LOGGER->log("PACKET RECEIVED", packet.to_string());
             send_ack(sockfd, client_address, packet.getSeq());
-            logger->log("SENDING ACK", "Sending ack with seq: " + std::to_string(packet.getSeq()));
+            Common::LOGGER->log("SENDING ACK", "Sending ack with seq: " + std::to_string(packet.getSeq()));
         }
 
-        if (receive_queue.size() == getExpectedNumberOfPackets(packet.getLen())) {
-            logger->log("MESSAGE CONSTRUCTED", "Received message: " + construct_message(packet.getLen()));
-            logger->log("CLEARING RECEIVE QUEUE", "receive_queue size: " + std::to_string(receive_queue.size()));
+        if (receive_queue.size() == get_expected_packet_count(packet.getLen())) {
+            Common::LOGGER->log("MESSAGE CONSTRUCTED", "Received message: " + construct_message(packet.getLen()));
+            Common::LOGGER->log("CLEARING RECEIVE QUEUE", "receive_queue size: " + std::to_string(receive_queue.size()));
         }
     }
 
+    if (!Common::RUNNING) {
+        Common::LOGGER->log("TERMINATING CLIENT", "Interrupt signal detected, exiting client and performing clean up");
+    } else if (std::cin.eof()) {
+        Common::LOGGER->log("TERMINATING CLIENT", "End of file detected, exiting client and performing clean up");
+    }
+
     close(sockfd);
+    Common::LOGGER->log("CLEAN UP", "Performed clean up");
 
     return EXIT_SUCCESS;
 }

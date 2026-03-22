@@ -66,7 +66,7 @@ const std::vector<uint8_t> Packet::serialize() const {
 }
 
 Packet Packet::deserialize(uint8_t* buf) {
-    Packet::logger->log("FUNCTION CALL", "Packet::derialize()");
+    Packet::logger->log("FUNCTION CALL", "Packet::deserialize()");
 
     int netSeq;
     int netLen;
@@ -81,7 +81,7 @@ Packet Packet::deserialize(uint8_t* buf) {
     
     Packet::logger->log("INFO", "Packet::derialize() - seq: " + std::to_string(packet.getSeq()) + " - payload: " + packet.payload_to_string());
 
-    Packet::logger->log("FUNCTION END", "Packet::derialize()");
+    Packet::logger->log("FUNCTION END", "Packet::deserialize()");
 
     return packet;
 }
