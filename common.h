@@ -3,6 +3,7 @@
 #include "logger.h"
 #include <sys/socket.h>
 #include <unistd.h>
+#include <stdexcept>
 #include <cstdint>
 #include <random>
 #include <iostream>
@@ -13,16 +14,6 @@
 #include <unordered_map>
 #include <vector>
 #include <queue>
-
-//#include "../packet.h"
-//#include "../logger.h"
-//#include <iostream>
-//#include <unordered_map>
-//#include <sys/socket.h>
-//#include <unistd.h>
-//#include <queue>
-//#include <random>
-//#include <chrono>
 
 enum class Flag {
     // Common input flags
@@ -51,6 +42,11 @@ struct Argument {
     Flag flag;
     void* value;
     Argument(Flag flag, void* value) : flag(flag), value(value) {}
+};
+
+class ArgumentException : public std::runtime_error {
+    public:
+        ArgumentException(const std::string& msg) : std::runtime_error(msg) {}
 };
 
 class Common {
@@ -107,14 +103,14 @@ class Common {
                             *(static_cast<std::string*>(Common::LEGAL_FLAGS.at(arg).value)) = argv[++i];
                             break;
                         case Flag::Unknown:
-                            // throw unknown argument error
+                            throw ArgumentException("Unknown argument");
                             break;
                         default:
                             *(static_cast<int*>(Common::LEGAL_FLAGS.at(arg).value)) = std::stoi(argv[++i]);
                             break;
                     }
                 } else {
-                    // throw out of bounds error
+                    throw ArgumentException("Too many arguments");
                 }
             }
         }
