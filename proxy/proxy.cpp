@@ -23,18 +23,6 @@ static int SERVER_DELAY_TIME_MIN;
 static int SERVER_DELAY_TIME_MAX;
 
 enum class Flag {
-    ListenIP,
-    ListenPort,
-    TargetIP,
-    TargetPort,
-    ClientDrop,
-    ClientDelay,
-    ClientDelayTimeMin,
-    ClientDelayTimeMax,
-    ServerDrop,
-    ServerDelay,
-    ServerDelayTimeMin,
-    ServerDelayTimeMax,
     Unknown
 };
 

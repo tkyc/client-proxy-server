@@ -2,10 +2,6 @@
 
 Packet::Packet(int seq, int len) : seq(seq), len(len) {}
 
-void Packet::setLogger(std::shared_ptr<Logger> logger) {
-    Packet::logger = logger;
-}
-
 void Packet::setSeq(int seq) {
     this->seq = seq;
 }
@@ -20,6 +16,10 @@ void Packet::setLen(int len) {
 
 const int& Packet::getLen() const {
     return this->len;
+}
+
+void Packet::setLogger(std::shared_ptr<Logger> logger) {
+    Packet::logger = logger;
 }
 
 const std::vector<uint8_t>& Packet::getPayload() const {
@@ -46,12 +46,6 @@ void Packet::setPayload(uint8_t* buf) {
     this->payload.assign(buf + 8, buf + 8 + Packet::MAX_SIZE);
 }
 
-int Packet::parse_ack(uint8_t* buf) {
-    int netSeq;
-    std::memcpy(&netSeq, buf, 4);
-    return ntohl(netSeq);
-}
-
 const std::vector<uint8_t> Packet::serialize() const {
     Packet::logger->log("FUNCTION CALL", "Packet::serialize()");
 
@@ -64,7 +58,7 @@ const std::vector<uint8_t> Packet::serialize() const {
     std::memcpy(buf.data() + 4, &len, 4);
     std::memcpy(buf.data() + 8, this->payload.data(), Packet::MAX_SIZE);
 
-    Packet::logger->log("INFO", "Packet::serialize() - seq: " + std::to_string(this->seq) + " - payload: " + this->printPayload());
+    Packet::logger->log("INFO", "Packet::serialize() - seq: " + std::to_string(this->seq) + " - payload: " + this->payload_to_string());
 
     Packet::logger->log("FUNCTION END", "Packet::serialize()");
 
@@ -72,6 +66,8 @@ const std::vector<uint8_t> Packet::serialize() const {
 }
 
 Packet Packet::deserialize(uint8_t* buf) {
+    Packet::logger->log("FUNCTION CALL", "Packet::derialize()");
+
     int netSeq;
     int netLen;
 
@@ -82,15 +78,25 @@ Packet Packet::deserialize(uint8_t* buf) {
     packet.setSeq(ntohl(netSeq));
     packet.setLen(ntohl(netLen));
     packet.setPayload(buf);
+    
+    Packet::logger->log("INFO", "Packet::derialize() - seq: " + std::to_string(packet.getSeq()) + " - payload: " + packet.payload_to_string());
+
+    Packet::logger->log("FUNCTION END", "Packet::derialize()");
 
     return packet;
+}
+
+int Packet::parse_ack(uint8_t* buf) {
+    int netSeq;
+    std::memcpy(&netSeq, buf, 4);
+    return ntohl(netSeq);
 }
 
 const bool Packet::is_valid() const {
     return !(this->seq < 0) && this->payload.size() != 0;
 }
 
-const std::string Packet::printPayload() const {
+const std::string Packet::payload_to_string() const {
     std::ostringstream oss;
     oss << "[ ";
     for (auto byte : this->payload) {
