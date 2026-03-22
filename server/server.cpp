@@ -10,7 +10,6 @@
 static std::string IP;
 static int PORT;
 
-static uint32_t expected_seq = 0;
 static std::queue<Packet> receive_queue;
 
 enum class Flag {
@@ -68,7 +67,7 @@ int getExpectedNumberOfPackets(int msg_len) {
 }
 
 std::string construct_message(int msg_len) {
-    char chars[msg_len];
+    char chars[msg_len + 1];
     int offset = 0;
 
     while (!receive_queue.empty()) {
@@ -80,6 +79,8 @@ std::string construct_message(int msg_len) {
 
         receive_queue.pop();
     }
+
+    chars[msg_len] = '\0';
 
     return std::string(chars);
 }
@@ -126,15 +127,16 @@ int main(int argc, char* argv[]) {
     while (true) {
         int n = recvfrom(sockfd, buf, sizeof(buf), MSG_WAITALL, (sockaddr*) &client_address, &client_len);
         Packet packet = Packet::deserialize(buf);
-        
-        if (expected_seq == packet.getSeq()) {
-            receive_queue.push(packet);
-            logger->log("VALID PACKET RECEIVED", packet.to_string());
+
+        if (packet.is_valid()) {
+
+            if (receive_queue.empty() || receive_queue.back().getSeq() != packet.getSeq()) {
+                receive_queue.push(packet);
+            }
+
+            logger->log("PACKET RECEIVED", packet.to_string());
             send_ack(sockfd, client_address, packet.getSeq());
             logger->log("SENDING ACK", "Sending ack with seq: " + std::to_string(packet.getSeq()));
-            expected_seq++;
-        } else {
-            logger->log("INVALID SEQ - NO ACK", "Expected seq: " + std::to_string(expected_seq) + " - Received: " + std::to_string(packet.getSeq()));
         }
 
         if (receive_queue.size() == getExpectedNumberOfPackets(packet.getLen())) {

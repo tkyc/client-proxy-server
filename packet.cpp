@@ -46,6 +46,12 @@ void Packet::setPayload(uint8_t* buf) {
     this->payload.assign(buf + 8, buf + 8 + Packet::MAX_SIZE);
 }
 
+int Packet::parse_ack(uint8_t* buf) {
+    int netSeq;
+    std::memcpy(&netSeq, buf, 4);
+    return ntohl(netSeq);
+}
+
 const std::vector<uint8_t> Packet::serialize() const {
     Packet::logger->log("FUNCTION CALL", "Packet::serialize()");
 
@@ -78,6 +84,10 @@ Packet Packet::deserialize(uint8_t* buf) {
     packet.setPayload(buf);
 
     return packet;
+}
+
+const bool Packet::is_valid() const {
+    return !(this->seq < 0) && this->payload.size() != 0;
 }
 
 const std::string Packet::printPayload() const {

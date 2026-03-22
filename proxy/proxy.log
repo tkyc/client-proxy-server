@@ -1,0 +1,870 @@
+2026-03-22T00:14:14.684 | PROXY | LISTENING FOR CLIENT | listen=127.0.0.1:4000
+2026-03-22T00:14:14.685 | PROXY | CONNECTED SERVER | target=127.0.0.1:5000
+2026-03-22T00:36:46.402 | PROXY | LISTENING FOR CLIENT | listen=127.0.0.1:4000
+2026-03-22T00:36:46.402 | PROXY | CONNECTED SERVER | target=127.0.0.1:5000
+2026-03-22T00:37:29.968 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T00:37:29.968 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T00:37:29.970 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T00:37:29.971 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T00:37:29.971 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T00:37:29.971 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T00:37:29.971 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T00:37:29.971 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T00:37:29.972 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T00:37:29.972 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T00:37:29.972 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T00:37:29.972 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T00:37:29.972 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T00:37:29.972 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T00:37:29.972 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T00:37:29.972 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T00:37:29.972 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T00:37:29.972 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T00:37:29.972 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T00:37:29.972 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:14:05.728 | PROXY | LISTENING FOR CLIENT | listen=127.0.0.1:4000
+2026-03-22T01:14:05.728 | PROXY | CONNECTED SERVER | target=127.0.0.1:5000
+2026-03-22T01:14:22.437 | PROXY | LISTENING FOR CLIENT | listen=127.0.0.1:4000
+2026-03-22T01:14:22.437 | PROXY | CONNECTED SERVER | target=127.0.0.1:5000
+2026-03-22T01:14:26.413 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:14:26.413 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:14:26.414 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:14:26.414 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:14:26.414 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:14:26.414 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T01:19:02.419 | PROXY | LISTENING FOR CLIENT | listen=127.0.0.1:4000
+2026-03-22T01:19:02.419 | PROXY | CONNECTED SERVER | target=127.0.0.1:5000
+2026-03-22T01:19:06.835 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:19:06.836 | PROXY | DELAYING PACKET | Delaying client packet to server for: 175 ms
+2026-03-22T01:19:07.011 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:19:07.011 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:19:07.011 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:19:07.011 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:19:07.011 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:19:07.011 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:19:07.011 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:19:07.011 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:19:07.011 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T01:19:12.094 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:19:12.094 | PROXY | DELAYING PACKET | Delaying client packet to server for: 157 ms
+2026-03-22T01:19:12.251 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:19:12.252 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:19:12.252 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:19:12.252 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:19:12.252 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:19:12.252 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:19:12.252 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:19:12.252 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:19:12.252 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:19:12.253 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:19:12.253 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:20:57.447 | PROXY | LISTENING FOR CLIENT | listen=127.0.0.1:4000
+2026-03-22T01:20:57.447 | PROXY | CONNECTED SERVER | target=127.0.0.1:5000
+2026-03-22T01:21:06.891 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:21:06.892 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:21:06.892 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:21:06.892 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:21:06.892 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:21:06.892 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:21:06.892 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:21:06.892 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:21:06.893 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:21:06.893 | PROXY | DELAYING PACKET | Delaying client packet to server for: 200 ms
+2026-03-22T01:21:07.093 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:21:07.093 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:21:07.093 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:21:07.094 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:21:07.094 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T01:21:12.414 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:21:12.414 | PROXY | DELAYING PACKET | Delaying client packet to server for: 150 ms
+2026-03-22T01:21:12.564 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:21:12.565 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:21:12.565 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:21:12.565 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:21:12.565 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:21:12.565 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:21:12.565 | PROXY | DELAYING ACK | Delaying server ack to client for: 187 ms
+2026-03-22T01:21:12.753 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:34:55.805 | PROXY | LISTENING FOR CLIENT | listen=127.0.0.1:4000
+2026-03-22T01:34:55.805 | PROXY | CONNECTED SERVER | target=127.0.0.1:5000
+2026-03-22T01:35:01.032 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:35:01.032 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:35:01.033 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:35:01.033 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:35:01.033 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:35:01.033 | PROXY | DELAYING PACKET | Delaying client packet to server for: 114 ms
+2026-03-22T01:35:01.147 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:35:01.147 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:35:01.148 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:35:01.148 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:35:01.148 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:35:01.148 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:35:01.148 | PROXY | DELAYING ACK | Delaying server ack to client for: 198 ms
+2026-03-22T01:35:01.347 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:35:01.347 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:35:01.347 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:35:01.347 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:35:01.347 | PROXY | DROPPING ACK | Dropping server ack
+2026-03-22T01:35:06.462 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:35:06.462 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:35:06.462 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:35:06.462 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:35:06.463 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:35:06.463 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:35:06.463 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:35:06.463 | PROXY | DROPPING ACK | Dropping server ack
+2026-03-22T01:35:11.582 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:35:11.582 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:35:11.582 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:35:11.582 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:40:09.679 | PROXY | LISTENING FOR CLIENT | listen=127.0.0.1:4000
+2026-03-22T01:40:09.679 | PROXY | CONNECTED SERVER | target=127.0.0.1:5000
+2026-03-22T01:40:27.385 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:40:27.385 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:40:27.385 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:40:27.386 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:40:27.386 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:40:27.386 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:40:27.386 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:40:27.386 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:40:27.386 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:40:27.386 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:40:27.386 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:40:27.386 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:40:27.386 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:40:27.386 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:40:27.386 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:40:27.386 | PROXY | DELAYING ACK | Delaying server ack to client for: 284 ms
+2026-03-22T01:40:27.671 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:40:27.671 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:40:27.671 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:40:27.671 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:40:27.671 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:42:30.442 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:42:30.442 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:44:50.527 | PROXY | LISTENING FOR CLIENT | listen=127.0.0.1:4000
+2026-03-22T01:44:50.527 | PROXY | CONNECTED SERVER | target=127.0.0.1:5000
+2026-03-22T01:44:57.707 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:44:57.707 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:44:57.707 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:44:57.707 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:44:57.707 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:44:57.707 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:44:57.708 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:44:57.708 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:44:57.708 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:44:57.708 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:44:57.708 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:44:57.708 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:44:57.708 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:44:57.708 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:44:57.708 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:44:57.708 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:44:57.708 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:44:57.708 | PROXY | DELAYING PACKET | Delaying client packet to server for: 173 ms
+2026-03-22T01:44:57.882 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:44:57.882 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:44:57.882 | PROXY | DELAYING ACK | Delaying server ack to client for: 185 ms
+2026-03-22T01:44:58.068 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:05.452 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:05.452 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:05.453 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:05.453 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:05.453 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:05.453 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:05.453 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:05.453 | PROXY | DELAYING ACK | Delaying server ack to client for: 231 ms
+2026-03-22T01:45:05.684 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:05.684 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:05.684 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:05.684 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:05.684 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:05.685 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:05.685 | PROXY | DELAYING PACKET | Delaying client packet to server for: 121 ms
+2026-03-22T01:45:05.806 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:05.806 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:05.806 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:05.806 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:05.806 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:05.807 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:05.807 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:15.439 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:15.439 | PROXY | DELAYING PACKET | Delaying client packet to server for: 133 ms
+2026-03-22T01:45:15.573 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:15.573 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:15.573 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:15.573 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:15.573 | PROXY | DELAYING PACKET | Delaying client packet to server for: 166 ms
+2026-03-22T01:45:15.740 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:15.740 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:15.740 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:15.740 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:15.740 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:15.740 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:15.740 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:15.741 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:15.741 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:15.741 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:15.741 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:15.741 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:15.741 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:15.741 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:15.741 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:15.741 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:15.741 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:15.741 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:15.741 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:15.742 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:15.742 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:15.742 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:15.742 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:15.742 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:15.742 | PROXY | DELAYING PACKET | Delaying client packet to server for: 196 ms
+2026-03-22T01:45:15.938 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:15.938 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:15.938 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:51.790 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:51.790 | PROXY | DELAYING PACKET | Delaying client packet to server for: 184 ms
+2026-03-22T01:45:51.975 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:51.975 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:51.975 | PROXY | DELAYING ACK | Delaying server ack to client for: 232 ms
+2026-03-22T01:45:52.208 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:52.209 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:52.209 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T01:45:57.214 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:57.214 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:57.214 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:57.214 | PROXY | DELAYING ACK | Delaying server ack to client for: 193 ms
+2026-03-22T01:45:57.408 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:57.408 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:57.408 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:57.408 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:57.408 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:57.408 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:57.409 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:57.409 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:57.409 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:57.409 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:57.409 | PROXY | DELAYING PACKET | Delaying client packet to server for: 127 ms
+2026-03-22T01:45:57.536 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:45:57.536 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:45:57.536 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:45:57.537 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:45:57.537 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T01:46:02.846 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:02.846 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:02.846 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:02.846 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:46:02.846 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:02.847 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:02.847 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:02.847 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:46:02.847 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:02.847 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:02.847 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:02.847 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:46:02.847 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:02.847 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:02.848 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:02.848 | PROXY | DELAYING ACK | Delaying server ack to client for: 249 ms
+2026-03-22T01:46:03.097 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:46:03.097 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:03.097 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:03.098 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:03.098 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:46:03.098 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:03.098 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:03.098 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:03.098 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:46:03.098 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:03.098 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:03.098 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:03.098 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:46:03.098 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:03.098 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:03.098 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:03.098 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:46:03.098 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:03.098 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:03.098 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:03.098 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:46:03.098 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:03.098 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:03.099 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:03.099 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:46:03.099 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:03.099 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:03.099 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:03.099 | PROXY | DROPPING ACK | Dropping server ack
+2026-03-22T01:46:08.478 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:08.478 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:08.478 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:08.478 | PROXY | DROPPING ACK | Dropping server ack
+2026-03-22T01:46:13.598 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:13.598 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T01:46:18.718 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:46:18.721 | PROXY | DELAYING PACKET | Delaying client packet to server for: 139 ms
+2026-03-22T01:46:18.860 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:46:18.860 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:46:18.860 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:52.565 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:52.565 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:52.565 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:52.565 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:52.565 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:52.565 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:52.565 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:52.565 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:52.566 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:52.566 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:52.566 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:52.566 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:52.566 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:52.566 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:52.566 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:52.566 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:52.566 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:52.566 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:52.566 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:52.566 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:52.566 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:52.566 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:52.566 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:52.566 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:52.567 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:52.567 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:52.567 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:52.567 | PROXY | DELAYING ACK | Delaying server ack to client for: 273 ms
+2026-03-22T01:49:52.840 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:52.840 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:52.840 | PROXY | DELAYING PACKET | Delaying client packet to server for: 167 ms
+2026-03-22T01:49:53.008 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:53.008 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:53.008 | PROXY | DELAYING ACK | Delaying server ack to client for: 154 ms
+2026-03-22T01:49:53.162 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:53.163 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:53.163 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:53.163 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:53.163 | PROXY | DELAYING ACK | Delaying server ack to client for: 289 ms
+2026-03-22T01:49:53.452 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:53.453 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:53.453 | PROXY | DELAYING PACKET | Delaying client packet to server for: 112 ms
+2026-03-22T01:49:53.565 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:53.566 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:53.566 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:53.566 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:53.566 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:53.566 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:53.566 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:53.566 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:53.566 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T01:49:58.878 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:58.878 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:58.878 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:58.879 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:58.879 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:58.879 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:58.879 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:58.879 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:49:58.879 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:49:58.879 | PROXY | DELAYING PACKET | Delaying client packet to server for: 169 ms
+2026-03-22T01:49:59.049 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:49:59.049 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:49:59.049 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:39.994 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:39.994 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:39.994 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:39.994 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:39.994 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:39.995 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:39.995 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:39.995 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:39.995 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:39.995 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:39.995 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:39.995 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:39.995 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:39.995 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:39.995 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:39.995 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:39.995 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:39.995 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:39.995 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:39.995 | PROXY | DELAYING ACK | Delaying server ack to client for: 185 ms
+2026-03-22T01:50:40.181 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:40.181 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:40.181 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:40.181 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:40.181 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:40.181 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:40.181 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:40.182 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:40.182 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:40.182 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:40.182 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:40.182 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:40.182 | PROXY | DROPPING ACK | Dropping server ack
+2026-03-22T01:50:45.470 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:45.470 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:45.470 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:45.470 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:45.471 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:45.471 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T01:50:50.590 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:50.590 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:50.590 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:50.590 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:50.590 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:50.590 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:50.590 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:50.590 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:50.590 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:50.590 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:50.590 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:50.590 | PROXY | DELAYING ACK | Delaying server ack to client for: 272 ms
+2026-03-22T01:50:50.863 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:50.863 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:50.863 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:50.863 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:50.863 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:50.863 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:50.863 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:50.864 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:50.864 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:50.864 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:50.864 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:50.864 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:50.864 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:50.864 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:50.864 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:50.864 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:50.864 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:50.864 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:50.864 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:50.865 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:50.865 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:50.865 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:50.865 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:50.865 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:50.865 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:50.865 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:50.865 | PROXY | DELAYING PACKET | Delaying client packet to server for: 108 ms
+2026-03-22T01:50:50.973 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:50.973 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:50.974 | PROXY | DELAYING ACK | Delaying server ack to client for: 269 ms
+2026-03-22T01:50:51.243 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:50:51.243 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:50:51.243 | PROXY | DELAYING PACKET | Delaying client packet to server for: 164 ms
+2026-03-22T01:50:51.407 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:50:51.408 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:50:51.408 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:21.066 | PROXY | LISTENING FOR CLIENT | listen=127.0.0.1:4000
+2026-03-22T01:52:21.067 | PROXY | CONNECTED TO SERVER | target=127.0.0.1:5000
+2026-03-22T01:52:30.211 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:30.211 | PROXY | DELAYING PACKET | Delaying client packet to server for: 197 ms
+2026-03-22T01:52:30.409 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:30.409 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:30.409 | PROXY | DELAYING ACK | Delaying server ack to client for: 256 ms
+2026-03-22T01:52:30.666 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:30.666 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:30.666 | PROXY | DELAYING PACKET | Delaying client packet to server for: 165 ms
+2026-03-22T01:52:30.831 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:30.832 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:30.832 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:30.832 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:30.832 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:30.832 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:30.832 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:30.832 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:30.832 | PROXY | DELAYING PACKET | Delaying client packet to server for: 169 ms
+2026-03-22T01:52:31.002 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:31.002 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:31.002 | PROXY | DELAYING ACK | Delaying server ack to client for: 159 ms
+2026-03-22T01:52:31.161 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:31.162 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:31.162 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:31.162 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:31.162 | PROXY | DELAYING ACK | Delaying server ack to client for: 210 ms
+2026-03-22T01:52:31.373 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:31.373 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:31.373 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:31.373 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:31.374 | PROXY | DELAYING ACK | Delaying server ack to client for: 231 ms
+2026-03-22T01:52:31.605 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:31.605 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:31.605 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:31.605 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:31.605 | PROXY | DELAYING ACK | Delaying server ack to client for: 239 ms
+2026-03-22T01:52:31.845 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:31.845 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:31.845 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:31.846 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:31.846 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:31.846 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:31.846 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:31.846 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:31.846 | PROXY | DROPPING ACK | Dropping server ack
+2026-03-22T01:52:37.087 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:37.087 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:37.087 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:37.087 | PROXY | DELAYING ACK | Delaying server ack to client for: 231 ms
+2026-03-22T01:52:37.319 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:37.319 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:37.319 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:37.319 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:37.319 | PROXY | DROPPING ACK | Dropping server ack
+2026-03-22T01:52:42.718 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:42.718 | PROXY | DELAYING PACKET | Delaying client packet to server for: 168 ms
+2026-03-22T01:52:42.887 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:42.887 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:42.887 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:42.887 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:42.887 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:42.888 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:42.888 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:42.888 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:42.888 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T01:52:48.351 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:48.351 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:48.351 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:48.351 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:48.351 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:48.351 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:48.352 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:48.352 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:48.352 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:48.352 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:48.352 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:48.352 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:48.352 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:48.352 | PROXY | DELAYING PACKET | Delaying client packet to server for: 149 ms
+2026-03-22T01:52:48.502 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:48.502 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:48.502 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:48.502 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:48.502 | PROXY | DELAYING PACKET | Delaying client packet to server for: 193 ms
+2026-03-22T01:52:48.696 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:48.696 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:48.696 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:48.697 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:48.697 | PROXY | DELAYING PACKET | Delaying client packet to server for: 180 ms
+2026-03-22T01:52:48.877 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:48.877 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:48.877 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:48.877 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:48.877 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:48.877 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:48.877 | PROXY | DROPPING ACK | Dropping server ack
+2026-03-22T01:52:53.982 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:53.982 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:53.982 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:53.982 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:52:53.982 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:52:53.982 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:52:53.983 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:52:53.983 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:16.944 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:16.944 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:16.944 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:16.944 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:16.945 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:16.945 | PROXY | DELAYING PACKET | Delaying client packet to server for: 157 ms
+2026-03-22T01:59:17.102 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:17.102 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:17.102 | PROXY | DELAYING ACK | Delaying server ack to client for: 282 ms
+2026-03-22T01:59:17.385 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:17.385 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:17.385 | PROXY | DELAYING PACKET | Delaying client packet to server for: 130 ms
+2026-03-22T01:59:17.515 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:17.515 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:17.515 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:17.516 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:17.516 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:17.516 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:17.516 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:17.516 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:17.516 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:17.516 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:17.516 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:30.294 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:30.294 | PROXY | DELAYING PACKET | Delaying client packet to server for: 180 ms
+2026-03-22T01:59:30.474 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:30.474 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:30.475 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:30.475 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:30.475 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:30.475 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:30.475 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:30.475 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:30.475 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:30.475 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:30.475 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:30.475 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:30.475 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:30.475 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:30.475 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:30.475 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:30.475 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:30.476 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:30.476 | PROXY | DELAYING ACK | Delaying server ack to client for: 224 ms
+2026-03-22T01:59:30.700 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:30.700 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:30.700 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:30.700 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:30.700 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:30.701 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:30.701 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:30.701 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:30.701 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:30.701 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:30.701 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:30.701 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:30.701 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:30.701 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:30.701 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:30.701 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:30.701 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:30.701 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:30.701 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:30.702 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:30.702 | PROXY | DROPPING ACK | Dropping server ack
+2026-03-22T01:59:35.902 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:35.902 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:35.902 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:35.903 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:35.903 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:35.903 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:35.903 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:35.903 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:35.903 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:35.903 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:35.903 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:35.904 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:35.904 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:35.904 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:35.904 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:35.904 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:35.904 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:35.904 | PROXY | DELAYING PACKET | Delaying client packet to server for: 148 ms
+2026-03-22T01:59:36.053 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:36.053 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:36.053 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:36.053 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:36.053 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:36.053 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:36.053 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:36.053 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:36.053 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T01:59:41.534 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:41.534 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:41.534 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:41.534 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:41.535 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:41.535 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:41.535 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:41.535 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:41.535 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:41.535 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:41.535 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:41.535 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T01:59:41.535 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:41.535 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T01:59:46.654 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:46.654 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T01:59:51.774 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:51.774 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:51.774 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:51.774 | PROXY | DROPPING ACK | Dropping server ack
+2026-03-22T01:59:56.894 | PROXY | RECEIVED PACKET | Received packet from client
+2026-03-22T01:59:56.894 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T01:59:56.894 | PROXY | RECEIVED ACK | Received ack from server
+2026-03-22T01:59:56.894 | PROXY | FORWARDING ACK | Forwarding ack to client
+2026-03-22T02:12:37.592 | PROXY | LISTENING FOR CLIENT | listen=127.0.0.1:4000
+2026-03-22T02:12:37.592 | PROXY | CONNECTED TO SERVER | target=127.0.0.1:5000
+2026-03-22T02:13:05.596 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 0 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:05.596 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:05.597 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 0
+2026-03-22T02:13:05.597 | PROXY | FORWARDING ACK | Forwarding ack seq: 0 to client
+2026-03-22T02:13:05.597 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 1 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:05.597 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T02:13:11.006 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 1 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:11.006 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:11.006 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 1
+2026-03-22T02:13:11.006 | PROXY | FORWARDING ACK | Forwarding ack seq: 1 to client
+2026-03-22T02:13:11.007 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 2 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:11.007 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:11.007 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 2
+2026-03-22T02:13:11.007 | PROXY | FORWARDING ACK | Forwarding ack seq: 2 to client
+2026-03-22T02:13:11.007 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 3 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [ ]
+2026-03-22T02:13:11.007 | PROXY | DELAYING PACKET | Delaying client packet to server for: 155 ms
+2026-03-22T02:13:11.162 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:11.163 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 3
+2026-03-22T02:13:11.163 | PROXY | DROPPING ACK | Dropping server - ack seq: 3
+2026-03-22T02:13:16.126 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 3 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [ ]
+2026-03-22T02:13:16.126 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:16.126 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 3
+2026-03-22T02:13:16.126 | PROXY | DELAYING ACK | Delaying server ack seq: 3 to client for: 297 ms
+2026-03-22T02:13:16.423 | PROXY | FORWARDING ACK | Forwarding ack seq: 3 to client
+2026-03-22T02:13:16.423 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 4 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:16.424 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:16.424 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 4
+2026-03-22T02:13:16.424 | PROXY | FORWARDING ACK | Forwarding ack seq: 4 to client
+2026-03-22T02:13:16.424 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 5 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:16.424 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T02:13:21.758 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 5 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:21.758 | PROXY | DELAYING PACKET | Delaying client packet to server for: 163 ms
+2026-03-22T02:13:21.922 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:21.922 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 5
+2026-03-22T02:13:21.922 | PROXY | FORWARDING ACK | Forwarding ack seq: 5 to client
+2026-03-22T02:13:21.922 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 6 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:21.922 | PROXY | DELAYING PACKET | Delaying client packet to server for: 169 ms
+2026-03-22T02:13:22.092 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:22.092 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 6
+2026-03-22T02:13:22.092 | PROXY | FORWARDING ACK | Forwarding ack seq: 6 to client
+2026-03-22T02:13:22.092 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 7 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [ ]
+2026-03-22T02:13:22.092 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:22.092 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 7
+2026-03-22T02:13:22.092 | PROXY | FORWARDING ACK | Forwarding ack seq: 7 to client
+2026-03-22T02:13:22.093 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 8 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:22.093 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:22.093 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 8
+2026-03-22T02:13:22.093 | PROXY | FORWARDING ACK | Forwarding ack seq: 8 to client
+2026-03-22T02:13:22.093 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 9 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:22.093 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:22.093 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 9
+2026-03-22T02:13:22.093 | PROXY | FORWARDING ACK | Forwarding ack seq: 9 to client
+2026-03-22T02:13:22.093 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 10 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:22.093 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:22.093 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 10
+2026-03-22T02:13:22.093 | PROXY | DELAYING ACK | Delaying server ack seq: 10 to client for: 223 ms
+2026-03-22T02:13:22.317 | PROXY | FORWARDING ACK | Forwarding ack seq: 10 to client
+2026-03-22T02:13:22.317 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 11 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [ ]
+2026-03-22T02:13:22.317 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:22.318 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 11
+2026-03-22T02:13:22.318 | PROXY | FORWARDING ACK | Forwarding ack seq: 11 to client
+2026-03-22T02:13:22.318 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 12 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:22.318 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:22.318 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 12
+2026-03-22T02:13:22.318 | PROXY | FORWARDING ACK | Forwarding ack seq: 12 to client
+2026-03-22T02:13:22.318 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 13 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:22.318 | PROXY | DELAYING PACKET | Delaying client packet to server for: 106 ms
+2026-03-22T02:13:22.424 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:22.424 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 13
+2026-03-22T02:13:22.424 | PROXY | DELAYING ACK | Delaying server ack seq: 13 to client for: 232 ms
+2026-03-22T02:13:22.657 | PROXY | FORWARDING ACK | Forwarding ack seq: 13 to client
+2026-03-22T02:13:22.657 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 14 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:22.657 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:22.657 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 14
+2026-03-22T02:13:22.657 | PROXY | FORWARDING ACK | Forwarding ack seq: 14 to client
+2026-03-22T02:13:22.658 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 15 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [ ]
+2026-03-22T02:13:22.658 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:22.658 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 15
+2026-03-22T02:13:22.658 | PROXY | FORWARDING ACK | Forwarding ack seq: 15 to client
+2026-03-22T02:13:22.658 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 16 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:22.658 | PROXY | DELAYING PACKET | Delaying client packet to server for: 161 ms
+2026-03-22T02:13:22.819 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:22.820 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 16
+2026-03-22T02:13:22.820 | PROXY | DELAYING ACK | Delaying server ack seq: 16 to client for: 270 ms
+2026-03-22T02:13:23.090 | PROXY | FORWARDING ACK | Forwarding ack seq: 16 to client
+2026-03-22T02:13:23.090 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 17 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:23.090 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:23.091 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 17
+2026-03-22T02:13:23.091 | PROXY | FORWARDING ACK | Forwarding ack seq: 17 to client
+2026-03-22T02:13:23.091 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 18 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:23.091 | PROXY | DELAYING PACKET | Delaying client packet to server for: 103 ms
+2026-03-22T02:13:23.195 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:23.195 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 18
+2026-03-22T02:13:23.195 | PROXY | FORWARDING ACK | Forwarding ack seq: 18 to client
+2026-03-22T02:13:23.195 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 19 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [ ]
+2026-03-22T02:13:23.195 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:23.195 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 19
+2026-03-22T02:13:23.195 | PROXY | FORWARDING ACK | Forwarding ack seq: 19 to client
+2026-03-22T02:13:23.196 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 20 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:23.196 | PROXY | DELAYING PACKET | Delaying client packet to server for: 106 ms
+2026-03-22T02:13:23.302 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:23.302 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 20
+2026-03-22T02:13:23.302 | PROXY | DROPPING ACK | Dropping server - ack seq: 20
+2026-03-22T02:13:28.414 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 20 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:28.414 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:28.414 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 20
+2026-03-22T02:13:28.414 | PROXY | FORWARDING ACK | Forwarding ack seq: 20 to client
+2026-03-22T02:13:28.414 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 21 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:28.414 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:28.415 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 21
+2026-03-22T02:13:28.415 | PROXY | FORWARDING ACK | Forwarding ack seq: 21 to client
+2026-03-22T02:13:28.415 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 22 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:28.415 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:28.415 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 22
+2026-03-22T02:13:28.415 | PROXY | FORWARDING ACK | Forwarding ack seq: 22 to client
+2026-03-22T02:13:28.415 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 23 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [ ]
+2026-03-22T02:13:28.415 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:28.415 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 23
+2026-03-22T02:13:28.415 | PROXY | FORWARDING ACK | Forwarding ack seq: 23 to client
+2026-03-22T02:13:28.415 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 24 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:28.415 | PROXY | DELAYING PACKET | Delaying client packet to server for: 103 ms
+2026-03-22T02:13:28.519 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:28.519 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 24
+2026-03-22T02:13:28.519 | PROXY | FORWARDING ACK | Forwarding ack seq: 24 to client
+2026-03-22T02:13:28.520 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 25 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:28.520 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:28.520 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 25
+2026-03-22T02:13:28.520 | PROXY | FORWARDING ACK | Forwarding ack seq: 25 to client
+2026-03-22T02:13:28.520 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 26 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:28.520 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:28.520 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 26
+2026-03-22T02:13:28.520 | PROXY | DELAYING ACK | Delaying server ack seq: 26 to client for: 152 ms
+2026-03-22T02:13:28.673 | PROXY | FORWARDING ACK | Forwarding ack seq: 26 to client
+2026-03-22T02:13:28.673 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 27 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [ ]
+2026-03-22T02:13:28.673 | PROXY | DELAYING PACKET | Delaying client packet to server for: 124 ms
+2026-03-22T02:13:28.797 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:28.797 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 27
+2026-03-22T02:13:28.797 | PROXY | FORWARDING ACK | Forwarding ack seq: 27 to client
+2026-03-22T02:13:28.798 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 28 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:28.798 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:28.798 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 28
+2026-03-22T02:13:28.798 | PROXY | FORWARDING ACK | Forwarding ack seq: 28 to client
+2026-03-22T02:13:28.798 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 29 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:28.798 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:28.798 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 29
+2026-03-22T02:13:28.798 | PROXY | FORWARDING ACK | Forwarding ack seq: 29 to client
+2026-03-22T02:13:28.798 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 30 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:28.798 | PROXY | DROPPING PACKET | Dropping client packet
+2026-03-22T02:13:34.046 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 30 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:34.046 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:34.046 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 30
+2026-03-22T02:13:34.046 | PROXY | FORWARDING ACK | Forwarding ack seq: 30 to client
+2026-03-22T02:13:34.046 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 31 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [ ]
+2026-03-22T02:13:34.047 | PROXY | DELAYING PACKET | Delaying client packet to server for: 110 ms
+2026-03-22T02:13:34.157 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:34.157 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 31
+2026-03-22T02:13:34.157 | PROXY | FORWARDING ACK | Forwarding ack seq: 31 to client
+2026-03-22T02:13:34.158 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 32 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:34.158 | PROXY | DELAYING PACKET | Delaying client packet to server for: 131 ms
+2026-03-22T02:13:34.289 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:34.289 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 32
+2026-03-22T02:13:34.289 | PROXY | FORWARDING ACK | Forwarding ack seq: 32 to client
+2026-03-22T02:13:34.290 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 33 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:34.290 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:34.290 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 33
+2026-03-22T02:13:34.290 | PROXY | FORWARDING ACK | Forwarding ack seq: 33 to client
+2026-03-22T02:13:34.290 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 34 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:34.290 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:34.290 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 34
+2026-03-22T02:13:34.290 | PROXY | FORWARDING ACK | Forwarding ack seq: 34 to client
+2026-03-22T02:13:34.290 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 35 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [ ]
+2026-03-22T02:13:34.290 | PROXY | DELAYING PACKET | Delaying client packet to server for: 163 ms
+2026-03-22T02:13:34.453 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:34.454 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 35
+2026-03-22T02:13:34.454 | PROXY | FORWARDING ACK | Forwarding ack seq: 35 to client
+2026-03-22T02:13:34.454 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 36 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:34.454 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:34.454 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 36
+2026-03-22T02:13:34.454 | PROXY | FORWARDING ACK | Forwarding ack seq: 36 to client
+2026-03-22T02:13:34.454 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 37 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:34.454 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:34.454 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 37
+2026-03-22T02:13:34.454 | PROXY | FORWARDING ACK | Forwarding ack seq: 37 to client
+2026-03-22T02:13:34.454 | PROXY | RECEIVED PACKET | Received packet from client: SEQUENCE: 38 - MESSAGE LEN: 39 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [h]
+2026-03-22T02:13:34.454 | PROXY | FORWARDING PACKET | Forwarding packet to server
+2026-03-22T02:13:34.454 | PROXY | RECEIVED ACK | Received ack from server - ack seq: 38
+2026-03-22T02:13:34.454 | PROXY | FORWARDING ACK | Forwarding ack seq: 38 to client

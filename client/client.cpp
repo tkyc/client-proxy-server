@@ -14,7 +14,6 @@ static int MAX_RETRIES;
 static uint32_t seq = 0;
 static std::queue<Packet> sent_queue;
 
-
 enum class Flag {
     TargetIP,
     TargetPort,
@@ -79,7 +78,6 @@ int main(int argc, char* argv[]) {
 
     int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
 
-
     if (sockfd < 0) {
         std::cerr << "[ERROR] Failed to create socket"<< std::endl;
         logger->log("ERROR", "Failed to create socket");
@@ -87,7 +85,7 @@ int main(int argc, char* argv[]) {
     }
 
     struct timeval tv;
-    tv.tv_sec = 5;
+    tv.tv_sec = TIMEOUT;
     tv.tv_usec = 0;
 
     if (setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0) {
@@ -117,11 +115,11 @@ int main(int argc, char* argv[]) {
 
     std::string input;
     int ack;
-    int tries = 0;
 
     while (true) {
         std::getline(std::cin, input);
         int offset = 0;
+        int tries = 0;
 
         while (offset < input.length()) {
             Packet packet(seq++, input.length());
@@ -139,7 +137,12 @@ int main(int argc, char* argv[]) {
                 logger->log("RE-SENT PACKET", "Re-sending packet -- try count: " + std::to_string(tries));
             }
 
-            tries = 0;
+            if (tries == MAX_RETRIES) {
+                logger->log("FAILURE", "Failed to send message");
+                break;
+            } else {
+                tries = 0;
+            }
 
             if (!(ack < 0)) {
                 logger->log("RECEIVED ACK", "Received ack for seq: " + std::to_string(sent_queue.front().getSeq()));
