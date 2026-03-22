@@ -226,3 +226,369 @@
 2026-03-21T00:49:29.692 | CLIENT | FUNCTION CALL | Packet::serialize()
 2026-03-21T00:49:29.692 | CLIENT | INFO | Packet::serialize() - seq: 150994944 - payload: [ 0x68 0x67 ]
 2026-03-21T00:49:29.692 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T16:36:33.217 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T16:36:47.771 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T16:36:47.771 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T16:36:47.771 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T16:36:47.771 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T16:36:47.771 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T16:36:47.771 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T16:36:47.771 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T16:36:47.771 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T16:36:47.771 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T16:46:47.566 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T16:46:48.999 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T16:46:48.999 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T16:46:48.999 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T16:46:48.999 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T16:46:48.999 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T16:46:48.999 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T16:46:49.000 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T16:46:49.000 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T16:46:49.000 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T16:52:05.808 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T16:52:13.297 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T16:52:13.297 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T16:52:13.297 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T16:52:13.297 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T16:52:13.297 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T16:52:13.297 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T16:52:13.298 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T16:52:13.298 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T16:52:13.298 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:48:16.433 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T17:48:22.632 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:48:22.632 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T17:48:22.632 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:48:22.632 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:48:22.632 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T17:48:22.632 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:48:22.633 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:48:22.633 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T17:48:22.633 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:50:25.672 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T17:50:34.109 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T17:50:35.702 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:50:35.702 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T17:50:35.702 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:50:35.702 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:50:35.702 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T17:50:35.702 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:50:35.703 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:50:35.703 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T17:50:35.703 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:52:32.431 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T17:52:42.777 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:52:42.777 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T17:52:42.777 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:52:42.778 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:52:42.778 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T17:52:42.778 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:52:42.778 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:52:42.778 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T17:52:42.778 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:54:32.188 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T17:54:42.238 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:54:42.238 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T17:54:42.238 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:54:42.238 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:54:42.238 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T17:54:42.238 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:54:42.239 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:54:42.239 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T17:54:42.239 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:58:01.483 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T17:58:06.904 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:58:06.904 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T17:58:06.904 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:58:06.905 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:58:06.905 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T17:58:06.905 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:58:06.905 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:58:06.905 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T17:58:06.905 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:58:58.807 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T17:59:07.004 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:59:07.004 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T17:59:07.004 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:59:07.005 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:59:07.005 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T17:59:07.005 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T17:59:07.005 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T17:59:07.005 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T17:59:07.005 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:02:23.401 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:02:27.975 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:02:27.975 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:02:27.975 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:02:27.975 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:02:27.976 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:02:27.976 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:02:27.976 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:02:27.976 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T18:02:27.976 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:02:42.815 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:02:46.637 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:02:46.637 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:02:46.637 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:03:07.358 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:03:07.358 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:03:07.358 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:03:07.358 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:03:07.358 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T18:03:07.358 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:03:27.343 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:03:34.771 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:03:34.771 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:03:34.771 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:03:34.771 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:03:34.771 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:03:34.771 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:03:34.772 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:03:34.772 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T18:03:34.772 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:07:57.527 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:08:06.174 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:08:06.174 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:08:06.174 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:08:06.174 | CLIENT | SENDING PACKET | SEQUENCE: 0 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [he]
+2026-03-21T18:08:06.175 | CLIENT | RECEIVED ACK | Received ack for seq: 
+2026-03-21T18:08:06.175 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:08:06.175 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:08:06.175 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:08:06.175 | CLIENT | SENDING PACKET | SEQUENCE: 1 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [ll]
+2026-03-21T18:08:06.175 | CLIENT | RECEIVED ACK | eceived ack for seq: 
+2026-03-21T18:08:06.175 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:08:06.175 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T18:08:06.175 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:08:06.175 | CLIENT | SENDING PACKET | SEQUENCE: 2 - MESSAGE LEN: 5 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [o]
+2026-03-21T18:08:06.175 | CLIENT | RECEIVED ACK | ceived ack for seq: 
+2026-03-21T18:09:50.357 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:10:05.557 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:10:05.557 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:10:05.557 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:10:05.557 | CLIENT | SENDING PACKET | SEQUENCE: 0 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [he]
+2026-03-21T18:10:05.557 | CLIENT | RECEIVED ACK | Received ack for seq: 0
+2026-03-21T18:10:05.557 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:10:05.557 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:10:05.557 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:10:05.557 | CLIENT | SENDING PACKET | SEQUENCE: 1 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [ll]
+2026-03-21T18:10:05.557 | CLIENT | RECEIVED ACK | Received ack for seq: 1
+2026-03-21T18:10:05.558 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:10:05.558 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T18:10:05.558 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:10:05.558 | CLIENT | SENDING PACKET | SEQUENCE: 2 - MESSAGE LEN: 5 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [o]
+2026-03-21T18:10:05.558 | CLIENT | RECEIVED ACK | Received ack for seq: 2
+2026-03-21T18:11:35.181 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:11:36.943 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:11:36.943 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:11:36.943 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:11:36.943 | CLIENT | SENDING PACKET | SEQUENCE: 0 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [he]
+2026-03-21T18:11:42.430 | CLIENT | RE-SENT PACKET | e-sending packet -- try count: 
+2026-03-21T18:11:47.550 | CLIENT | RE-SENT PACKET | -sending packet -- try count: 
+2026-03-21T18:11:52.670 | CLIENT | RE-SENT PACKET | sending packet -- try count: 
+2026-03-21T18:11:57.790 | CLIENT | RECEIVED ACK | Received ack for seq: 0
+2026-03-21T18:11:57.790 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:11:57.790 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:11:57.790 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:11:57.790 | CLIENT | SENDING PACKET | SEQUENCE: 1 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [ll]
+2026-03-21T18:12:02.910 | CLIENT | RECEIVED ACK | Received ack for seq: 1
+2026-03-21T18:12:02.910 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:12:02.910 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T18:12:02.910 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:12:02.910 | CLIENT | SENDING PACKET | SEQUENCE: 2 - MESSAGE LEN: 5 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [o]
+2026-03-21T18:12:08.030 | CLIENT | RECEIVED ACK | Received ack for seq: 2
+2026-03-21T18:15:12.015 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:15:13.624 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:15:13.624 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:15:13.624 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:15:13.624 | CLIENT | SENDING PACKET | SEQUENCE: 0 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [he]
+2026-03-21T18:15:19.006 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:15:24.126 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:15:29.246 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:15:34.366 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:15:34.366 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:15:34.366 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:15:34.366 | CLIENT | SENDING PACKET | SEQUENCE: 1 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [ll]
+2026-03-21T18:15:39.486 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:15:39.486 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T18:15:39.486 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:15:39.486 | CLIENT | SENDING PACKET | SEQUENCE: 2 - MESSAGE LEN: 5 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [o]
+2026-03-21T18:17:59.691 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:18:01.233 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:18:01.233 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:18:01.233 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:18:01.233 | CLIENT | SENDING PACKET | SEQUENCE: 0 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [he]
+2026-03-21T18:18:06.430 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:18:11.550 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:18:16.670 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:18:21.790 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:18:21.790 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:18:21.790 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:18:21.790 | CLIENT | SENDING PACKET | SEQUENCE: 1 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [ll]
+2026-03-21T18:18:26.910 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:18:32.030 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:18:37.150 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:18:42.270 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:18:42.270 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T18:18:42.270 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:18:42.270 | CLIENT | SENDING PACKET | SEQUENCE: 2 - MESSAGE LEN: 5 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [o]
+2026-03-21T18:18:47.390 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:18:52.510 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:18:57.630 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:21:18.802 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:21:21.083 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:21:21.083 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:21:21.083 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:21:21.083 | CLIENT | SENDING PACKET | SEQUENCE: 0 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [he]
+2026-03-21T18:21:26.110 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 0
+2026-03-21T18:21:26.110 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:21:31.230 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 0
+2026-03-21T18:21:31.230 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:21:36.351 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 0
+2026-03-21T18:21:36.351 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:21:41.470 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:21:41.470 | CLIENT | INFO | Packet::serialize() - seq: 16777216 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:21:41.470 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:21:41.470 | CLIENT | SENDING PACKET | SEQUENCE: 1 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [ll]
+2026-03-21T18:21:46.590 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 1
+2026-03-21T18:21:46.592 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:21:51.710 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 1
+2026-03-21T18:21:51.710 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:21:56.830 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 1
+2026-03-21T18:21:56.830 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:22:01.950 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:22:01.950 | CLIENT | INFO | Packet::serialize() - seq: 33554432 - payload: [ 0x6f ]
+2026-03-21T18:22:01.950 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:22:01.950 | CLIENT | SENDING PACKET | SEQUENCE: 2 - MESSAGE LEN: 5 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [o]
+2026-03-21T18:22:07.070 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 2
+2026-03-21T18:22:07.070 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:22:12.190 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 2
+2026-03-21T18:22:12.190 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:22:17.310 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 2
+2026-03-21T18:22:17.310 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:23:17.484 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:23:18.816 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:23:18.816 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:23:18.816 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:23:18.816 | CLIENT | SENDING PACKET | SEQUENCE: 0 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [he]
+2026-03-21T18:23:23.870 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 0
+2026-03-21T18:23:23.870 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:23:28.990 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 0
+2026-03-21T18:23:28.990 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:23:34.110 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 0
+2026-03-21T18:23:34.110 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:23:39.230 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:23:39.230 | CLIENT | INFO | Packet::serialize() - seq: 1 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:23:39.230 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:23:39.230 | CLIENT | SENDING PACKET | SEQUENCE: 1 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [ll]
+2026-03-21T18:23:44.350 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 1
+2026-03-21T18:23:44.350 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:23:49.470 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 1
+2026-03-21T18:23:49.470 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:23:54.590 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 1
+2026-03-21T18:23:54.590 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:23:59.710 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:23:59.710 | CLIENT | INFO | Packet::serialize() - seq: 2 - payload: [ 0x6f ]
+2026-03-21T18:23:59.710 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:23:59.710 | CLIENT | SENDING PACKET | SEQUENCE: 2 - MESSAGE LEN: 5 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [o]
+2026-03-21T18:24:04.830 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 2
+2026-03-21T18:24:04.830 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:24:09.950 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 2
+2026-03-21T18:24:09.950 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:24:15.070 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 2
+2026-03-21T18:24:15.071 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:29:13.616 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:29:15.700 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:29:15.700 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:29:15.700 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:29:15.700 | CLIENT | SENDING PACKET | SEQUENCE: 0 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [he]
+2026-03-21T18:29:15.701 | CLIENT | RECEIVED ACK | Received ack for seq: 0
+2026-03-21T18:29:15.701 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:29:15.701 | CLIENT | INFO | Packet::serialize() - seq: 1 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:29:15.701 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:29:15.701 | CLIENT | SENDING PACKET | SEQUENCE: 1 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [ll]
+2026-03-21T18:29:15.701 | CLIENT | RECEIVED ACK | Received ack for seq: 1
+2026-03-21T18:29:15.701 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:29:15.701 | CLIENT | INFO | Packet::serialize() - seq: 2 - payload: [ 0x6f ]
+2026-03-21T18:29:15.701 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:29:15.701 | CLIENT | SENDING PACKET | SEQUENCE: 2 - MESSAGE LEN: 5 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [o]
+2026-03-21T18:29:15.701 | CLIENT | RECEIVED ACK | Received ack for seq: 2
+2026-03-21T18:29:25.779 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:29:27.075 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:29:27.075 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:29:27.075 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:29:27.075 | CLIENT | SENDING PACKET | SEQUENCE: 0 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [he]
+2026-03-21T18:29:32.510 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 0
+2026-03-21T18:29:32.510 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:29:37.630 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 0
+2026-03-21T18:29:37.630 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:29:42.750 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 0
+2026-03-21T18:29:42.750 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:29:47.870 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:29:47.870 | CLIENT | INFO | Packet::serialize() - seq: 1 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:29:47.870 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:29:47.870 | CLIENT | SENDING PACKET | SEQUENCE: 1 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [ll]
+2026-03-21T18:29:52.990 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 1
+2026-03-21T18:29:52.990 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:29:58.110 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 1
+2026-03-21T18:29:58.110 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:30:03.231 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 1
+2026-03-21T18:30:03.231 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:30:08.350 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:30:08.350 | CLIENT | INFO | Packet::serialize() - seq: 2 - payload: [ 0x6f ]
+2026-03-21T18:30:08.350 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:30:08.350 | CLIENT | SENDING PACKET | SEQUENCE: 2 - MESSAGE LEN: 5 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [o]
+2026-03-21T18:30:13.470 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 2
+2026-03-21T18:30:13.470 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:30:18.590 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 2
+2026-03-21T18:30:18.590 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:30:23.710 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 2
+2026-03-21T18:30:23.710 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:37:22.482 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:37:23.828 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:37:23.828 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:37:23.828 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:37:23.828 | CLIENT | SENDING PACKET | SEQUENCE: 0 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [he]
+2026-03-21T18:37:23.829 | CLIENT | RECEIVED ACK | Received ack for seq: 0
+2026-03-21T18:37:23.829 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:37:23.829 | CLIENT | INFO | Packet::serialize() - seq: 1 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:37:23.829 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:37:23.829 | CLIENT | SENDING PACKET | SEQUENCE: 1 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [ll]
+2026-03-21T18:37:23.829 | CLIENT | RECEIVED ACK | Received ack for seq: 1
+2026-03-21T18:37:23.829 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:37:23.829 | CLIENT | INFO | Packet::serialize() - seq: 2 - payload: [ 0x6f ]
+2026-03-21T18:37:23.829 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:37:23.829 | CLIENT | SENDING PACKET | SEQUENCE: 2 - MESSAGE LEN: 5 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [o]
+2026-03-21T18:37:23.829 | CLIENT | RECEIVED ACK | Received ack for seq: 2
+2026-03-21T18:37:28.160 | CLIENT | CONNECTED | target=127.0.0.1:8888 - timeout=10 - max_retries=3
+2026-03-21T18:37:29.976 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:37:29.977 | CLIENT | INFO | Packet::serialize() - seq: 0 - payload: [ 0x68 0x65 ]
+2026-03-21T18:37:29.977 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:37:29.977 | CLIENT | SENDING PACKET | SEQUENCE: 0 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [he]
+2026-03-21T18:37:35.326 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 0
+2026-03-21T18:37:35.326 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:37:40.446 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 0
+2026-03-21T18:37:40.446 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:37:45.566 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 0
+2026-03-21T18:37:45.566 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:37:50.686 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:37:50.686 | CLIENT | INFO | Packet::serialize() - seq: 1 - payload: [ 0x6c 0x6c ]
+2026-03-21T18:37:50.686 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:37:50.686 | CLIENT | SENDING PACKET | SEQUENCE: 1 - MESSAGE LEN: 5 - PAYLOAD SIZE: 2 - PAYLOAD MSG CHARS: [ll]
+2026-03-21T18:37:55.806 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 1
+2026-03-21T18:37:55.806 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:38:00.926 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 1
+2026-03-21T18:38:00.926 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:38:06.047 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 1
+2026-03-21T18:38:06.047 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3
+2026-03-21T18:38:11.166 | CLIENT | FUNCTION CALL | Packet::serialize()
+2026-03-21T18:38:11.166 | CLIENT | INFO | Packet::serialize() - seq: 2 - payload: [ 0x6f ]
+2026-03-21T18:38:11.166 | CLIENT | FUNCTION END | Packet::serialize()
+2026-03-21T18:38:11.166 | CLIENT | SENDING PACKET | SEQUENCE: 2 - MESSAGE LEN: 5 - PAYLOAD SIZE: 1 - PAYLOAD MSG CHARS: [o]
+2026-03-21T18:38:16.286 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 2
+2026-03-21T18:38:16.286 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 1
+2026-03-21T18:38:21.406 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 2
+2026-03-21T18:38:21.406 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 2
+2026-03-21T18:38:26.526 | CLIENT | ACK TIMEOUT | Did not receive ack for seq: 2
+2026-03-21T18:38:26.526 | CLIENT | RE-SENT PACKET | Re-sending packet -- try count: 3

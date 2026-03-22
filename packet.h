@@ -47,6 +47,8 @@ class Packet {
 
         const std::string printPayload() const;
 
+        std::string to_string() const;
+
         friend std::ostream& operator<<(std::ostream& os, const Packet& packet);
 };
 

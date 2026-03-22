@@ -58,7 +58,7 @@ const std::vector<uint8_t> Packet::serialize() const {
     std::memcpy(buf.data() + 4, &len, 4);
     std::memcpy(buf.data() + 8, this->payload.data(), Packet::MAX_SIZE);
 
-    Packet::logger->log("INFO", "Packet::serialize() - seq: " + std::to_string(seq) + " - payload: " + this->printPayload());
+    Packet::logger->log("INFO", "Packet::serialize() - seq: " + std::to_string(this->seq) + " - payload: " + this->printPayload());
 
     Packet::logger->log("FUNCTION END", "Packet::serialize()");
 
@@ -88,6 +88,12 @@ const std::string Packet::printPayload() const {
     }
     oss << "]";
     return oss.str();
+}
+
+std::string Packet::to_string() const {
+    std::stringstream ss;
+    ss << *this;
+    return ss.str();
 }
 
 std::ostream& operator<<(std::ostream& os, const Packet& packet) {

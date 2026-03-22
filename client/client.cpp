@@ -66,7 +66,7 @@ int wait_for_ack(int& sockfd, sockaddr_in& server_address) {
     int netSeq;
     int n = recvfrom(sockfd, buf, sizeof(buf), MSG_WAITALL, (sockaddr*) &server_address, &len);
     std::memcpy(&netSeq, buf, 4);
-    return ntohl(netSeq);
+    return n < 0 ? n : (int) ntohl(netSeq);
 }
 
 int main(int argc, char* argv[]) {
@@ -79,10 +79,20 @@ int main(int argc, char* argv[]) {
 
     int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
 
+
     if (sockfd < 0) {
         std::cerr << "[ERROR] Failed to create socket"<< std::endl;
         logger->log("ERROR", "Failed to create socket");
         return EXIT_FAILURE;
+    }
+
+    struct timeval tv;
+    tv.tv_sec = 5;
+    tv.tv_usec = 0;
+
+    if (setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0) {
+        std::cerr << "[ERROR] Failed to set timeout"<< std::endl;
+        logger->log("ERROR", "Failed to set timeout");
     }
 
     sockaddr_in server_address;
@@ -106,6 +116,8 @@ int main(int argc, char* argv[]) {
              + " - max_retries=" + std::to_string(MAX_RETRIES));
 
     std::string input;
+    int ack;
+    int tries = 0;
 
     while (true) {
         std::getline(std::cin, input);
@@ -114,13 +126,25 @@ int main(int argc, char* argv[]) {
         while (offset < input.length()) {
             Packet packet(seq++, input.length());
             offset = packet.setPayload(input, offset);
-            std::vector<uint8_t> buf = packet.serialize();
-            sendto(sockfd, buf.data(), buf.size(), 0, (sockaddr*) &server_address, sizeof(server_address));
             sent_queue.push(packet);
-            int ack = wait_for_ack(sockfd, server_address);
-            std::cout << sent_queue.front() << std::endl;
-            std::cout << "ACK: " << ack << " MATCH: " << (ack == sent_queue.front().getSeq()) << " RECEIVED ACK: " << sent_queue.front().getSeq() << std::endl;
-            sent_queue.pop();
+            std::vector<uint8_t> buf = packet.serialize();
+
+            logger->log("SENDING PACKET", packet.to_string());
+            sendto(sockfd, buf.data(), buf.size(), 0, (sockaddr*) &server_address, sizeof(server_address));
+            
+            while ((ack = wait_for_ack(sockfd, server_address)) < 0 && tries < MAX_RETRIES) {
+                logger->log("ACK TIMEOUT", "Did not receive ack for seq: " + std::to_string(packet.getSeq()));
+                sendto(sockfd, buf.data(), buf.size(), 0, (sockaddr*) &server_address, sizeof(server_address));
+                tries++;
+                logger->log("RE-SENT PACKET", "Re-sending packet -- try count: " + std::to_string(tries));
+            }
+
+            tries = 0;
+
+            if (!(ack < 0)) {
+                logger->log("RECEIVED ACK", "Received ack for seq: " + std::to_string(sent_queue.front().getSeq()));
+                sent_queue.pop();
+            }
         }
     }
 

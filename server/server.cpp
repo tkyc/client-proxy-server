@@ -127,14 +127,19 @@ int main(int argc, char* argv[]) {
         int n = recvfrom(sockfd, buf, sizeof(buf), MSG_WAITALL, (sockaddr*) &client_address, &client_len);
         Packet packet = Packet::deserialize(buf);
         
-        if (expected_seq++ == packet.getSeq()) {
+        if (expected_seq == packet.getSeq()) {
             receive_queue.push(packet);
-            logger->
+            logger->log("VALID PACKET RECEIVED", packet.to_string());
             send_ack(sockfd, client_address, packet.getSeq());
+            logger->log("SENDING ACK", "Sending ack with seq: " + std::to_string(packet.getSeq()));
+            expected_seq++;
+        } else {
+            logger->log("INVALID SEQ - NO ACK", "Expected seq: " + std::to_string(expected_seq) + " - Received: " + std::to_string(packet.getSeq()));
         }
 
         if (receive_queue.size() == getExpectedNumberOfPackets(packet.getLen())) {
-            std::cout << construct_message(packet.getLen()) << std::endl;
+            logger->log("MESSAGE CONSTRUCTED", "Received message: " + construct_message(packet.getLen()));
+            logger->log("CLEARING RECEIVE QUEUE", "receive_queue size: " + std::to_string(receive_queue.size()));
         }
     }
 
