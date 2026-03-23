@@ -6,4 +6,7 @@ proxy_bin
 .python-version
 results.png
 .venv
+build
+dist
+visualize_logs.spec
 
