@@ -2,6 +2,10 @@
 
 int main(int argc, char* argv[]) {
 
+    if (argc < Common::PROXY_ARG_COUNT) {
+        throw ArgumentException("Missing arguments");
+    }
+
     Common::setup_logger("PROXY", "proxy.log");
     Common::setup_signal_handler();
     Common::parse_args(argc, argv);

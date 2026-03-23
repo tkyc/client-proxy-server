@@ -17,6 +17,10 @@ bool read_input(std::string& input) {
 
 int main(int argc, char* argv[]) {
 
+    if (argc < Common::CLIENT_ARG_COUNT) {
+        throw ArgumentException("Missing arguments");
+    }
+
     Common::setup_logger("CLIENT", "client.log");
     Common::setup_signal_handler();
     Common::parse_args(argc, argv);

@@ -75,6 +75,10 @@ class Common {
         static int SERVER_DELAY_TIME_MIN;
         static int SERVER_DELAY_TIME_MAX;
    
+        static inline constexpr uint8_t CLIENT_ARG_COUNT = 9;
+        static inline constexpr uint8_t SERVER_ARG_COUNT = 5;
+        static inline constexpr uint8_t PROXY_ARG_COUNT = 25;
+
         static void setup_logger(std::string program, std::string logfile) {
             LOGGER->init(program, logfile);
             Packet::setLogger(LOGGER);

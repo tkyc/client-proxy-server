@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+"""
+visualize_logs.py  –  COMP7005 Reliable-UDP log visualizer
+Produces:
+  • Top    : Event statistics bar chart
+  • Bottom : Proxy delay timeline
+"""
+
 import re, sys, argparse
 from datetime import datetime
 from collections import defaultdict
@@ -91,8 +99,7 @@ def draw_stats(ax, events, msg):
         ax.text(bar.get_x()+bar.get_width()/2, bar.get_height()+0.08,
                 str(val), ha="center", va="bottom", fontsize=11, fontweight="bold", color="#212121")
 
-    ax.set_title("Event Statistics", fontsize=14, fontweight="bold", pad=10)
-    ax.set_ylabel("Count", fontsize=11)
+    ax.set_ylabel("Packet", fontsize=11)
     ax.grid(axis="y", alpha=0.3, linestyle=":", zorder=0)
     ax.set_axisbelow(True)
     ax.yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
@@ -101,14 +108,24 @@ def draw_stats(ax, events, msg):
 
 def draw_delay_timeline(ax, events):
     delay_starts={}; forward_times={}
+    last_proxy_pkt_seq = None
     for ev in events:
         s=ev["seq"]
-        if s is None: continue
         if ev["prog"]=="PROXY":
-            if ev["event"]=="DELAYING PACKET":   delay_starts[(s,"C→S")]=(ev["ts"],ev["delay_ms"] or 0)
-            elif ev["event"]=="DELAYING ACK":    delay_starts[(s,"S→C")]=(ev["ts"],ev["delay_ms"] or 0)
-            elif ev["event"]=="FORWARDING PACKET": forward_times[(s,"C→S")]=ev["ts"]
-            elif ev["event"]=="FORWARDING ACK":    forward_times[(s,"S→C")]=ev["ts"]
+            if ev["event"]=="RECEIVED PACKET" and s is not None:
+                last_proxy_pkt_seq = s
+            if ev["event"]=="DELAYING PACKET":
+                use_seq = s if s is not None else last_proxy_pkt_seq
+                if use_seq is not None:
+                    delay_starts[(use_seq,"C→S")]=(ev["ts"],ev["delay_ms"] or 0)
+            elif ev["event"]=="DELAYING ACK" and s is not None:
+                delay_starts[(s,"S→C")]=(ev["ts"],ev["delay_ms"] or 0)
+            elif ev["event"]=="FORWARDING PACKET":
+                use_seq = s if s is not None else last_proxy_pkt_seq
+                if use_seq is not None:
+                    forward_times[(use_seq,"C→S")]=ev["ts"]
+            elif ev["event"]=="FORWARDING ACK" and s is not None:
+                forward_times[(s,"S→C")]=ev["ts"]
 
     if not delay_starts:
         ax.text(0.5,0.5,"No delayed packets in this session",

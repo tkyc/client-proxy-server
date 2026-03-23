@@ -34,6 +34,10 @@ std::string construct_message(int msg_len) {
 
 int main(int argc, char* argv[]) {
 
+    if (argc < Common::SERVER_ARG_COUNT) {
+        throw ArgumentException("Missing arguments");
+    }
+
     Common::setup_logger("SERVER", "server.log");
     Common::setup_signal_handler();
     Common::parse_args(argc, argv);
