@@ -1,2 +1,6 @@
 *.log
 *.o
+client_bin
+server_bin
+proxy_bin
+
