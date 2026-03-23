@@ -3,6 +3,7 @@ CXXFLAGS = -std=c++17 -Wall -Wextra -O2
 
 HEADERS     = common.h logger.h packet.h
 COMMON_OBJS = common.o logger.o packet.o
+LOG_OBJS = client.log server.log proxy.log
 
 TARGETS = client_bin server_bin proxy_bin
 
@@ -29,5 +30,5 @@ proxy_bin: proxy/proxy.cpp $(COMMON_OBJS) $(HEADERS)
 	$(CXX) $(CXXFLAGS) -o $@ proxy/proxy.cpp $(COMMON_OBJS)
 
 clean:
-	rm -f $(TARGETS) $(COMMON_OBJS)
+	rm -f $(TARGETS) $(COMMON_OBJS) $(LOG_OBJS)
 
