@@ -9,7 +9,7 @@ void Logger::init(const std::string& program, const std::string& path) {
     }
 }
  
-void Logger::log(const std::string& event, uint32_t seq, const std::string& extra = "") {
+void Logger::log(const std::string& event, int32_t seq, const std::string& extra = "") {
     std::string line = now_ts() + " | " + program + " | " + event + " | "
                      + (seq == -1 ? "" : std::to_string(seq) + " | ") + extra;
 

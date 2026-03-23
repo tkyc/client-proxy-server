@@ -10,7 +10,7 @@
 #include <arpa/inet.h>
 #include <iomanip>
 
-// Wire format: [ sequence number (4 bytes) | message len (4 bytes) | payload (MAX_SIZE bytes) ]
+// Wire format: [ sequence number (4 bytes) | message len (4 bytes) | payload (PAYLOAD_SIZE bytes) ]
 class Packet {
     private:
         static inline std::shared_ptr<Logger> logger = nullptr;
@@ -19,8 +19,8 @@ class Packet {
         std::vector<uint8_t> payload;
 
     public:
-        static inline constexpr int MAX_SIZE = 1;
-        static inline constexpr int PACKET_SIZE = 8 + MAX_SIZE;
+        static inline constexpr int PAYLOAD_SIZE = 1;
+        static inline constexpr int PACKET_SIZE = 8 + PAYLOAD_SIZE;
 
         Packet() {};
 
@@ -48,7 +48,7 @@ class Packet {
 
         static int parse_ack(uint8_t* buf);
 
-        const bool is_valid() const;
+        bool is_valid() const;
 
         const std::string payload_to_string() const;
 

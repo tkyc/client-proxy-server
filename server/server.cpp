@@ -5,14 +5,12 @@ static std::queue<Packet> receive_queue;
 void send_ack(int& sockfd, sockaddr_in& client_address, int seq) {
     int netSeq = htonl(seq);
     uint8_t buf[4];
-
     std::memcpy(buf, &netSeq, 4);
-
     sendto(sockfd, buf, 4, 0, (sockaddr*) &client_address, sizeof(client_address));
 }
 
-int get_expected_packet_count(int msg_len) {
-    return msg_len % Packet::MAX_SIZE == 0 ? msg_len / Packet::MAX_SIZE : msg_len / Packet::MAX_SIZE + 1;
+size_t get_expected_packet_count(int msg_len) {
+    return msg_len % Packet::PAYLOAD_SIZE == 0 ? msg_len / Packet::PAYLOAD_SIZE : msg_len / Packet::PAYLOAD_SIZE + 1;
 }
 
 std::string construct_message(int msg_len) {
@@ -22,7 +20,7 @@ std::string construct_message(int msg_len) {
     while (!receive_queue.empty()) {
         Packet& p = receive_queue.front();
 
-        for (int i = 0; i < Packet::MAX_SIZE && offset < msg_len; i++) {
+        for (int i = 0; i < Packet::PAYLOAD_SIZE && offset < msg_len; i++) {
             chars[offset++] = p.getPayload()[i];
         }
 
@@ -73,7 +71,20 @@ int main(int argc, char* argv[]) {
 
     while (Common::RUNNING) {
         int n = recvfrom(sockfd, buf, sizeof(buf), MSG_WAITALL, (sockaddr*) &client_address, &client_len);
-        Packet packet = Packet::deserialize(buf);
+        Packet packet;
+
+        if (n < 0) {
+            if (errno == EINTR) {
+                continue; 
+            }
+            Common::LOGGER->log("FATAL ERROR", std::string("received_from_client: ") + std::strerror(errno));
+            break;
+        } else if (n > 0) {
+            packet = Packet::deserialize(buf);
+        } else {
+            Common::LOGGER->log("ZERO BYTE PACKET RECEIVED", "Empty packet received");
+            continue;
+        }
 
         if (packet.is_valid()) {
 

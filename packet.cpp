@@ -28,10 +28,10 @@ const std::vector<uint8_t>& Packet::getPayload() const {
 
 int Packet::setPayload(std::string& input, int offset) {
     int count = 0;
-    int i = offset;
+    size_t i = offset;
 
     for (; i < input.length(); i++) {
-        if (count < MAX_SIZE) {
+        if (count < Packet::PAYLOAD_SIZE) {
             this->payload.push_back(input[i]);
             count++;
         } else {
@@ -43,7 +43,7 @@ int Packet::setPayload(std::string& input, int offset) {
 }
 
 void Packet::setPayload(uint8_t* buf) {
-    this->payload.assign(buf + 8, buf + 8 + Packet::MAX_SIZE);
+    this->payload.assign(buf + 8, buf + 8 + Packet::PAYLOAD_SIZE);
 }
 
 const std::vector<uint8_t> Packet::serialize() const {
@@ -56,7 +56,7 @@ const std::vector<uint8_t> Packet::serialize() const {
 
     std::memcpy(buf.data() + 0, &seq, 4);
     std::memcpy(buf.data() + 4, &len, 4);
-    std::memcpy(buf.data() + 8, this->payload.data(), Packet::MAX_SIZE);
+    std::memcpy(buf.data() + 8, this->payload.data(), Packet::PAYLOAD_SIZE);
 
     Packet::logger->log("INFO", "Packet::serialize() - seq: " + std::to_string(this->seq) + " - payload: " + this->payload_to_string());
 
@@ -92,7 +92,7 @@ int Packet::parse_ack(uint8_t* buf) {
     return ntohl(netSeq);
 }
 
-const bool Packet::is_valid() const {
+bool Packet::is_valid() const {
     return !(this->seq < 0) && this->payload.size() != 0;
 }
 

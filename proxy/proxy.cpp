@@ -75,8 +75,21 @@ int main(int argc, char* argv[]) {
 
     while (Common::RUNNING) {
         int received_from_client = recvfrom(bind_sockfd, client_buf, sizeof(client_buf), MSG_WAITALL, (sockaddr*) &client_address, &client_len);
-        Packet packet = Packet::deserialize(client_buf);
-        Common::LOGGER->log("RECEIVED PACKET", "Received packet from client: " + packet.to_string());
+        Packet packet;
+
+        if (received_from_client < 0) {
+            if (errno == EINTR) {
+                continue; 
+            }
+            Common::LOGGER->log("FATAL ERROR", std::string("received_from_client: ") + std::strerror(errno));
+            break;
+        } else if (received_from_client > 0) {
+            packet = Packet::deserialize(client_buf);
+            Common::LOGGER->log("RECEIVED PACKET", "Received packet from client: " + packet.to_string());
+        } else {
+            Common::LOGGER->log("ZERO BYTE PACKET RECEIVED", "Empty packet received");
+            continue;
+        }
 
         if (client_drop(gen)) {
             Common::LOGGER->log("DROPPING PACKET", "Dropping client packet");
@@ -95,8 +108,21 @@ int main(int argc, char* argv[]) {
         }
 
         int received_from_server = recvfrom(connect_sockfd, server_buf, sizeof(server_buf), MSG_WAITALL, (sockaddr*) &connect_address, &server_len);
-        std::string ack = std::to_string(Packet::parse_ack(server_buf));
-        Common::LOGGER->log("RECEIVED ACK", "Received ack from server - ack seq: " + ack);
+        std::string ack;
+
+        if (received_from_server < 0) {
+            if (errno == EINTR) {
+                continue; 
+            }
+            Common::LOGGER->log("FATAL ERROR", std::string("received_from_server: ") + std::strerror(errno));
+            break;
+        } else if (received_from_server > 0) {
+            ack = std::to_string(Packet::parse_ack(server_buf));
+            Common::LOGGER->log("RECEIVED ACK", "Received ack from server - ack seq: " + ack);
+        } else {
+            Common::LOGGER->log("ZERO BYTE ACK RECEIVED", "Empty ack packet received");
+            continue;
+        }
 
         if (server_drop(gen)) {
 
