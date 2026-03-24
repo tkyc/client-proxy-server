@@ -1,6 +1,7 @@
 #include "../common.h"
 
 static std::queue<Packet> receive_queue;
+static std::unordered_map<int, int> seen;
 
 void send_ack(int& sockfd, sockaddr_in& client_address, int seq) {
     int netSeq = htonl(seq);
@@ -92,7 +93,8 @@ int main(int argc, char* argv[]) {
 
         if (packet.is_valid()) {
 
-            if (receive_queue.empty() || receive_queue.back().getSeq() != packet.getSeq()) {
+            if (!seen.count(packet.getSeq())) {
+                seen.emplace(packet.getSeq(), 0);
                 receive_queue.push(packet);
             }
 

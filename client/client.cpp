@@ -4,7 +4,7 @@ int wait_for_ack(int& sockfd, sockaddr_in& server_address) {
     uint32_t buf[4];
     socklen_t len = sizeof(server_address);
     int netSeq;
-    int n = recvfrom(sockfd, buf, sizeof(buf), MSG_WAITALL, (sockaddr*) &server_address, &len);
+    int n = recvfrom(sockfd, buf, sizeof(buf), MSG_DONTWAIT, (sockaddr*) &server_address, &len);
     std::memcpy(&netSeq, buf, 4);
     return n < 0 ? n : (int) ntohl(netSeq);
 }
@@ -33,14 +33,14 @@ int main(int argc, char* argv[]) {
         return EXIT_FAILURE;
     }
 
-    struct timeval tv;
-    tv.tv_sec = Common::TIMEOUT;
-    tv.tv_usec = 0;
+    //struct timeval tv;
+    //tv.tv_sec = Common::TIMEOUT;
+    //tv.tv_usec = 0;
 
-    if (setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0) {
-        std::cerr << "[ERROR] Failed to set timeout"<< std::endl;
-        Common::LOGGER->log("ERROR", "Failed to set timeout");
-    }
+    //if (setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0) {
+    //    std::cerr << "[ERROR] Failed to set timeout"<< std::endl;
+    //    Common::LOGGER->log("ERROR", "Failed to set timeout");
+    //}
 
     sockaddr_in server_address;
     server_address.sin_family = AF_INET;
@@ -63,7 +63,7 @@ int main(int argc, char* argv[]) {
              + " - max_retries=" + std::to_string(Common::MAX_RETRIES));
 
     std::string input;
-    int32_t ack;
+    int32_t ack ;
     uint32_t seq = 0;
     uint32_t offset;
     uint8_t retries;
@@ -75,21 +75,36 @@ int main(int argc, char* argv[]) {
         Common::LOGGER->log("ENTERED INPUT", "Entered message: " + input);
 
         while (offset < input.length()) {
-
             Packet packet(seq++, input.length());
             offset = packet.setPayload(input, offset);
             std::vector<uint8_t> buf = packet.serialize();
 
             Common::LOGGER->log("SENDING PACKET", packet.to_string());
             sendto(sockfd, buf.data(), buf.size(), 0, (sockaddr*) &server_address, sizeof(server_address));
-            
-            while ((ack = wait_for_ack(sockfd, server_address)) < 0 && retries < Common::MAX_RETRIES) {
-                Common::LOGGER->log("ACK TIMEOUT", "Did not receive ack for seq: " + std::to_string(packet.getSeq()));
-                sendto(sockfd, buf.data(), buf.size(), 0, (sockaddr*) &server_address, sizeof(server_address));
-                retries++;
-                Common::LOGGER->log("RE-SENT PACKET", "Re-sending packet -- try count: " + std::to_string(retries));
-            }
 
+            auto start = std::chrono::steady_clock::now();
+            auto timeout = std::chrono::seconds(Common::TIMEOUT);
+
+            while (Common::RUNNING && retries < Common::MAX_RETRIES) {
+                ack = wait_for_ack(sockfd, server_address);
+
+                if (ack >= 0) {
+                    Common::LOGGER->log("RECEIVED ACK", "Received ack for seq: " + std::to_string(ack));
+
+                    if (ack == packet.getSeq()) {
+                        break;
+                    }
+                }
+
+                if (std::chrono::steady_clock::now() - start > timeout) {
+                    Common::LOGGER->log("ACK TIMEOUT", "Did not receive ack for seq: " + std::to_string(packet.getSeq()));
+                    sendto(sockfd, buf.data(), buf.size(), 0, (sockaddr*) &server_address, sizeof(server_address));
+                    start = std::chrono::steady_clock::now();
+                    retries++;
+                    Common::LOGGER->log("RE-SENT PACKET", "Re-sending packet -- try count: " + std::to_string(retries));
+                }
+            }
+            
             if (retries == Common::MAX_RETRIES) {
                 Common::LOGGER->log("FAILURE", "Failed to send message");
                 break;
@@ -97,9 +112,6 @@ int main(int argc, char* argv[]) {
                 retries = 0;
             }
 
-            if (!(ack < 0)) {
-                Common::LOGGER->log("RECEIVED ACK", "Received ack for seq: " + std::to_string(packet.getSeq()));
-            }
         }
     }
 
