@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-"""
-visualize_logs.py  –  COMP7005 Reliable-UDP log visualizer
-Produces:
-  • Top    : Event statistics bar chart
-  • Bottom : Proxy delay timeline
-"""
-
 import re, sys, argparse
 from datetime import datetime
 from collections import defaultdict
@@ -106,58 +98,6 @@ def draw_stats(ax, events, msg):
     plt.setp(ax.get_xticklabels(), rotation=30, ha="right", fontsize=10)
     ax.spines["top"].set_visible(False); ax.spines["right"].set_visible(False)
 
-def draw_delay_timeline(ax, events):
-    delay_starts={}; forward_times={}
-    last_proxy_pkt_seq = None
-    for ev in events:
-        s=ev["seq"]
-        if ev["prog"]=="PROXY":
-            if ev["event"]=="RECEIVED PACKET" and s is not None:
-                last_proxy_pkt_seq = s
-            if ev["event"]=="DELAYING PACKET":
-                use_seq = s if s is not None else last_proxy_pkt_seq
-                if use_seq is not None:
-                    delay_starts[(use_seq,"C→S")]=(ev["ts"],ev["delay_ms"] or 0)
-            elif ev["event"]=="DELAYING ACK" and s is not None:
-                delay_starts[(s,"S→C")]=(ev["ts"],ev["delay_ms"] or 0)
-            elif ev["event"]=="FORWARDING PACKET":
-                use_seq = s if s is not None else last_proxy_pkt_seq
-                if use_seq is not None:
-                    forward_times[(use_seq,"C→S")]=ev["ts"]
-            elif ev["event"]=="FORWARDING ACK" and s is not None:
-                forward_times[(s,"S→C")]=ev["ts"]
-
-    if not delay_starts:
-        ax.text(0.5,0.5,"No delayed packets in this session",
-                ha="center",va="center",transform=ax.transAxes,fontsize=11,color="#9E9E9E")
-        ax.set_title("Proxy Delay Timeline",fontsize=14,fontweight="bold",pad=10)
-        ax.axis("off"); return
-
-    t0=min(v[0] for v in delay_starts.values())
-    rel_ms=lambda ts:(ts-t0).total_seconds()*1000
-    items=sorted(delay_starts.items(),key=lambda x:x[1][0])
-    yticks=[]; ylabels=[]
-
-    for yi,((seq,direction),(start_ts,delay_ms)) in enumerate(items):
-        t_start=rel_ms(start_ts)
-        fwd_key=(seq,direction)
-        t_end=(rel_ms(forward_times[fwd_key]) if fwd_key in forward_times else t_start+delay_ms)
-        actual_ms=int(t_end-t_start)
-        color=BLUE if direction=="C→S" else GREEN
-        ax.barh(yi,t_end-t_start,left=t_start,color=color,alpha=0.55,
-                edgecolor=color,linewidth=1.4,height=0.55)
-        ax.text(t_end+2,yi,f"{actual_ms} ms",va="center",fontsize=9,color=color,fontweight="bold")
-        yticks.append(yi); ylabels.append(f"seq {seq}  ({direction})")
-
-    ax.set_yticks(yticks); ax.set_yticklabels(ylabels,fontsize=9)
-    ax.set_xlabel("Relative time (ms)",fontsize=11)
-    ax.set_title("Proxy Delay Timeline",fontsize=14,fontweight="bold",pad=10)
-    ax.grid(axis="x",alpha=0.3,linestyle=":")
-    ax.spines["top"].set_visible(False); ax.spines["right"].set_visible(False)
-    legend=[mpatches.Patch(color=BLUE,alpha=0.6,label="C→S delay"),
-            mpatches.Patch(color=GREEN,alpha=0.6,label="S→C delay")]
-    ax.legend(handles=legend,fontsize=9,loc="lower right")
-
 def make_summary(events):
     c=defaultdict(int)
     for ev in events: c[(ev["prog"],ev["event"])]+=1
@@ -179,17 +119,11 @@ def render(client_log, proxy_log, server_log, out_file):
     fig=plt.figure(figsize=(16, 12 if has_delays else 7), facecolor="#FAFAFA")
     fig.suptitle("COMP7005  –  Reliable UDP Log Visualizer",fontsize=15,fontweight="bold",y=0.98)
 
-    if has_delays:
-        gs=gridspec.GridSpec(2,1,figure=fig,height_ratios=[2,1],hspace=0.5,
-                             left=0.08,right=0.97,top=0.93,bottom=0.08)
-        ax_stats=fig.add_subplot(gs[0]); ax_delay=fig.add_subplot(gs[1])
-    else:
-        gs=gridspec.GridSpec(1,1,figure=fig,left=0.08,right=0.97,top=0.93,bottom=0.14)
-        ax_stats=fig.add_subplot(gs[0]); ax_delay=None
+    gs=gridspec.GridSpec(1,1,figure=fig,left=0.08,right=0.97,top=0.93,bottom=0.14)
+    ax_stats=fig.add_subplot(gs[0]); ax_delay=None
 
     if events:
         draw_stats(ax_stats, events, msg)
-        if ax_delay: draw_delay_timeline(ax_delay, events)
 
     else:
         ax_stats.text(0.5,0.5,"No log data found.",ha="center",va="center",
