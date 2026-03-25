@@ -33,15 +33,6 @@ int main(int argc, char* argv[]) {
         return EXIT_FAILURE;
     }
 
-    //struct timeval tv;
-    //tv.tv_sec = Common::TIMEOUT;
-    //tv.tv_usec = 0;
-
-    //if (setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0) {
-    //    std::cerr << "[ERROR] Failed to set timeout"<< std::endl;
-    //    Common::LOGGER->log("ERROR", "Failed to set timeout");
-    //}
-
     sockaddr_in server_address;
     server_address.sin_family = AF_INET;
     server_address.sin_port = htons(Common::TARGET_PORT);
